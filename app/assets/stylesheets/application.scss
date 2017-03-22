@@ -1,0 +1,372 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import 'bourbon';
+@include font-face('futura', 'fonts/futura', $file-formats: ttf woff2 woff);
+@include font-face('futuraLight', 'fonts/futura_light', $file-formats: ttf);
+
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: url('background.jpg');
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+}
+
+/* Centered Container */
+.centered {
+    white-space: nowrap;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    &:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -0.25em;
+    }
+}
+
+/* No Overflow Container */
+.overflow {
+    overflow: hidden;
+}
+
+/* Centered */
+.form, svg {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Loading */
+svg {
+    width: 100px;
+}
+
+/* Login */
+.form {
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto;
+    animation: fadeIn 1s;
+    input {
+        background: none;
+        appearance: none;
+        border: none;
+        border-bottom: 1px solid gainsboro;
+        margin-bottom: 30px;
+        border-radius: 0;
+        box-sizing: border-box;
+        padding-bottom: 8px;
+        color: gainsboro;
+        &::placeholder {
+            text-transform: uppercase;
+        }
+        &:focus::placeholder {
+            color: transparent;
+        }
+    }
+    img {
+        max-width: 40%;
+        display: block;
+        margin: 0 auto 80px;
+    }
+    input, button {
+        display: block;
+        width: 100%;
+        letter-spacing: 2px;
+        font-size: 17px;
+        font-family: 'futura', sans-serif;
+        &:focus {
+            outline: none;
+        }
+    }
+    .actions input {
+        background: gainsboro;
+        color: black;
+        appearance: none;
+        border: none;
+        text-transform: uppercase;
+        transition: background .5s;
+        cursor: pointer;
+        opacity: .7;
+        padding: 3px 0;
+        &:hover {
+            background: darken(gainsboro, 10%);
+        }
+    }
+}
+
+/* Menu Bar */
+header {
+    background: black;
+    font-family: 'futura', sans-serif;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    img {
+        height: 40px;
+        padding: 20px;
+    }
+    nav {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .5s;
+        a {
+            display: block;
+            padding: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgb(200,200,200);
+            &.current {
+                color: white;
+            }
+        }
+    }
+    button {
+        height: 40px;
+        width: 40px;
+        background: none;
+        appearance: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        span {
+            display: block;
+            position: absolute;
+            top: 20px;
+            left: 6px;
+            right: 6px;
+            height: 3px;
+            background: white;
+            transition: background 0s 0.2s;
+            &:before, &:after {
+                position: absolute;
+                display: block;
+                left: 0;
+                width: 100%;
+                height: 3px;
+                background-color: #fff;
+                content: "";
+                    transition-duration: 0.2s, 0.2s;
+                    transition-delay: 0.2s, 0s;
+            }
+            &:before {
+                top: -10px;
+                transition-property: top, transform;
+            }
+
+            &:after {
+                bottom: -10px;
+                transition-property: bottom, transform;
+            }
+        }
+        &.active {
+            span {
+                background: none;
+                &:before, &:after {
+                    top: 0;
+                    bottom: 0;
+                    transition-delay: 0s, 0.2s;
+                }
+                &:before {
+                    transform: rotate(45deg);
+                }
+                &:after {
+                    transform: rotate(-45deg);
+                }
+            }
+            + nav {
+                max-height: 700px;
+            }
+        }
+    }
+}
+
+/* Guide */
+
+body#guide {
+    aside h5 {
+        background: rgb(60,60,60);
+        color: black;
+        text-transform: uppercase;
+        font-size: 18px;
+        padding: 5px;
+        letter-spacing: 2px;
+        text-align: center;
+        font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+        font-weight: lighter;
+        margin: 10px 0;
+    }
+    
+    article {
+        border-width: 0 10px;
+        border-color: white;
+        box-shadow: 0px 5000px 0px rgba(0, 0, 0, 0.45) inset;
+        border-style: solid;
+        &:first-of-type {
+            border-top: 10px solid white;
+        }
+        &:last-of-type {
+            border-bottom: 10px solid white;
+        }
+        p {
+            transition: opacity .5s, max-height .5s, padding .5s ease-in-out;
+        }
+    }
+    
+    article,
+    aside {
+        cursor: pointer;
+        padding: 50px 25px;
+        color: white;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-position: center 30% !important;
+        div {
+            max-width: 600px;
+            width: 95%;
+            margin: 0 auto;
+        }
+        h2 {
+            margin: 0;
+            font-weight: 500;
+            letter-spacing: 4.5px;
+            font-size: 14px;
+            text-align: center;
+            font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+            text-transform: uppercase;
+            user-select: none;
+        }
+        p {
+            line-height: 20px;
+            font-size: 14px;
+            max-height: 0;
+            margin: 0;
+            overflow: hidden;
+            opacity: 0;
+            font-family: "Lato", sans-serif;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 100;
+            text-align: center;
+        }
+        p span {
+            display: block;
+            font-weight: lighter;
+            font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 1px;
+            text-align: center;
+            padding-bottom: 20px;
+            transform: translateZ(0);
+            user-select: none;
+        }
+        &.open p {
+            max-height: 1000px;
+            padding-top: 25px;
+            opacity: 1;
+            -webkit-font-smoothing: subpixel-antialiased;
+        }
+    }
+    
+    article.open, article:not(.open):hover {
+      box-shadow: 0px 5000px 0px rgba(0, 0, 0, 0.7) inset; }
+    
+    aside {
+        padding: 10px !important;
+        height: 100px;
+        display: table;
+        width: 100%;
+        cursor: default!important;
+        box-sizing: border-box;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+        &:first-of-type {
+            box-sizing: content-box;
+            padding: 85px 0 0!important;
+        }
+        p {
+            max-height: 20em;
+            opacity: 1;
+            padding-top: 25px;
+        }
+        div {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        h2 {
+            font-size: 20px;
+            letter-spacing: 5px;
+        }
+    }
+    
+    #CTA {
+        background: url('images/header.jpg');
+        background-size: cover;
+        p {
+            text-align: center;
+            font-size: 10px;
+            max-width: 80%;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+            padding: 20px 0;
+            color: white;
+            margin: 0 auto;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            height: 10px;
+            padding-top: 3px;
+        }
+    }
+}
+
+@media only screen and (min-width : 768px)  {
+    header {
+        button {
+            display: none;
+        }
+        nav {
+            max-height: initial;
+            position: absolute;
+            top: 12px;
+            right: 0;
+            a {
+                display: inline-block;
+            }
+        }
+    }
+}
