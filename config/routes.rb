@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   root to: "profiles#index"
 
   get '/admin', to: 'profiles#admin', as: '/admin'
+  get '/guide', to: 'profiles#guide', as: '/guide'
+  get '/contact', to: 'profiles#contact', as: '/contact'
+
   get '/map', to: 'locations#map', as: '/map'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
