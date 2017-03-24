@@ -1,0 +1,35 @@
+@import 'bourbon';
+@include font-face('futura', 'fonts/futura', $file-formats: ttf woff2 woff);
+@include font-face('futuraLight', 'fonts/futura_light', $file-formats: ttf);
+
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background: black url('background.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'futura', sans-serif;
+}
+
+* {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+            supported by Chrome and Opera */
+}
+
+#welcome, #guide {
+    padding-top: 85px;
+}
+
+@import 'login';
+@import 'nav';
+@import 'welcome';
+@import 'itinerary';
+@import 'guide';
+@import 'map';
+@import 'contact';

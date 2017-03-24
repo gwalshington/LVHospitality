@@ -1,0 +1,107 @@
+header {
+    background: black;
+    font-family: 'futura', sans-serif;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 10000;
+    img {
+        height: 40px;
+        padding: 20px;
+    }
+    nav {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .5s;
+        a {
+            display: block;
+            padding: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            color: rgb(200,200,200);
+            &.current {
+                color: white;
+            }
+        }
+    }
+    button {
+        height: 40px;
+        width: 40px;
+        background: none;
+        appearance: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        span {
+            display: block;
+            position: absolute;
+            top: 20px;
+            left: 6px;
+            right: 6px;
+            height: 3px;
+            background: white;
+            transition: background 0s 0.2s;
+            &:before, &:after {
+                position: absolute;
+                display: block;
+                left: 0;
+                width: 100%;
+                height: 3px;
+                background-color: #fff;
+                content: "";
+                    transition-duration: 0.2s, 0.2s;
+                    transition-delay: 0.2s, 0s;
+            }
+            &:before {
+                top: -10px;
+                transition-property: top, transform;
+            }
+
+            &:after {
+                bottom: -10px;
+                transition-property: bottom, transform;
+            }
+        }
+        &.active {
+            span {
+                background: none;
+                &:before, &:after {
+                    top: 0;
+                    bottom: 0;
+                    transition-delay: 0s, 0.2s;
+                }
+                &:before {
+                    transform: rotate(45deg);
+                }
+                &:after {
+                    transform: rotate(-45deg);
+                }
+            }
+            + nav {
+                max-height: 700px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width : 767px)  {
+    header {
+        button {
+            display: none;
+        }
+        nav {
+            max-height: initial;
+            position: absolute;
+            top: 12px;
+            right: 0;
+            a {
+                display: inline-block;
+            }
+        }
+    }
+}
