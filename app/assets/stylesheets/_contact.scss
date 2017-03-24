@@ -47,7 +47,7 @@ body.contact {
                 font-size: 15px;
             }
         }
-        button {
+        a {
             appearance: none;
             background: black;
             font-family: 'futura', sans-serif;
@@ -58,6 +58,7 @@ body.contact {
             text-transform: uppercase;
             letter-spacing: 2px;
             display: block;
+            text-decoration: none;
             width: 100%;
         }
         img {
