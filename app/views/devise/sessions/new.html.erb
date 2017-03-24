@@ -1,6 +1,7 @@
 <body id="login">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <img src="assets/images/logo.png" />
+        <%= asset_path("logo.png") %>
+        # <img src="assets/images/logo.png" />
         <%= f.email_field :email, placeholder: "Email" %>
         <%= f.password_field :password, autocomplete: "off", placeholder: "Password" %>
         <% if devise_mapping.rememberable? -%>
