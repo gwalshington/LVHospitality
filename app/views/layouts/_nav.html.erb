@@ -1,7 +1,14 @@
-<%= link_to "Home", root_path  %>
-<%= link_to "Guide", guide_path  %>
-<%= link_to "Map", map_path  %>
-<%= link_to "LV High Jewlery", "http://us.louisvuitton.com/eng-us/stories/high-jewellery"  %>
-<%= link_to "Contact", contact_path  %>
-
-<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>  
+<header>
+    <img src="images/logo.png" />
+    <button>
+        <span></span>
+    </button>
+    <nav>
+        <%= link_to "Home", root_path  %>
+        <%= link_to "Guide", guide_path  %>
+        <%= link_to "Map", map_path  %>
+        <a href="http://us.louisvuitton.com/eng-us/stories/high-jewellery" target="_blank">LV High Jewlery</a>
+        <a id="contact">Contact</a>
+        <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+    </nav>
+</header>
