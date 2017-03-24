@@ -6,7 +6,7 @@ class ProfilesController < ApplicationController
   # GET /profiles.json
   def index
     @profiles = Profile.all
-    @events = Event.where("user_id = ? AND date >= ?", current_user.id, Date.today.beginning_of_day.in_time_zone('Hawaii')).order('date ASC')
+    @events = Event.where("user_id = ? AND date >= ?", current_user.id, Date.today.beginning_of_day).order('date ASC')
 
     #@24_events = Event.where("user_id = ? AND date >= ?", current_user.id, Date.today)
 
