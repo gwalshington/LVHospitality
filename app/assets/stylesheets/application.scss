@@ -1,15 +1,35 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import 'bourbon';
+@include font-face('futura', 'fonts/futura', $file-formats: ttf woff2 woff);
+@include font-face('futuraLight', 'fonts/futura_light', $file-formats: ttf);
+
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background: black url('background.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'futura', sans-serif;
+}
+
+* {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+            supported by Chrome and Opera */
+}
+
+#welcome, #guide {
+    padding-top: 85px;
+}
+
+@import 'login';
+@import 'nav';
+@import 'welcome';
+@import 'itinerary';
+@import 'guide';
+@import 'map';
+@import 'contact';

@@ -1,0 +1,79 @@
+section#itinerary {
+    background: rgba(0,0,0,0.5);
+    padding: 20px 0;
+    ul {
+        border-left: 10px solid rgba(220,220,220,0.7);
+        list-style-type: none;
+        padding-left: 30px;
+        max-width: 70%;
+        margin: 0 auto;
+        li {
+            background: rgba(220,220,220,0.7);
+            position: relative;
+            color: white;
+            text-transform: uppercase;
+            margin: 15px 0;
+            h3, h4, p {
+                margin: 0;
+            }
+            &.day {
+                text-align: center;
+                padding: 3px;
+            }
+            &.event {
+                padding: 10px;
+                &:after {
+                    right: 100%;
+                    top: 50%;
+                    border: solid transparent;
+                    content: " ";
+                    height: 0;
+                    width: 0;
+                    position: absolute;
+                    pointer-events: none;
+                    border-right-color: rgba(220,220,220,0.7);
+                    border-width: 15px;
+                    margin-top: -15px;
+                }
+                &:before {
+                    content: "";
+                    height: 25px;
+                    width: 25px;
+                    background-image: url('dot.svg');
+                    display: block;
+                    right: calc(100% + 22.5px);
+                    top: 50%;
+                    position: absolute;
+                    background-size: 25px 25px;
+                    margin-top: -12.5px;
+                }
+                &.current {
+                    background: rgba(56,139,186,0.7);
+                    &:after {
+                        border-right-color: rgba(56,139,186,0.7);
+                    }
+                    &:before {
+                        background-image: url('current.svg');
+                    }
+                }
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width : 767px)  {
+    section#itinerary {
+        width: 40%;
+        float: left;
+        padding-top: 85px;
+        height: 100%;
+        overflow: scroll;
+        box-sizing: border-box;
+        ul {
+            margin-top: 50px;
+        }
+    }
+}

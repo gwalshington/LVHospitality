@@ -1,0 +1,67 @@
+#login {
+    white-space: nowrap;
+    text-align: center;
+    &:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -0.25em;
+    }
+    form {
+        display: inline-block;
+        vertical-align: middle;
+        width: 80%;
+        max-width: 300px;
+        input {
+            background: none;
+            appearance: none;
+            border: none;
+            border-bottom: 1px solid gainsboro;
+            margin-bottom: 30px;
+            border-radius: 0;
+            box-sizing: border-box;
+            padding-bottom: 8px;
+            color: gainsboro;
+            &::placeholder {
+                text-transform: uppercase;
+            }
+            &:focus::placeholder {
+                color: transparent;
+            }
+        }
+        img {
+            max-width: 40%;
+            display: block;
+            margin: 0 auto 80px;
+        }
+        input, #button {
+            display: block;
+            width: 100%;
+            letter-spacing: 2px;
+            font-size: 17px;
+            font-family: 'futura', sans-serif;
+            &:focus {
+                outline: none;
+            }
+        }
+        
+    }
+    #button {
+        background: gainsboro;
+        color: black;
+        appearance: none;
+        border: none;
+        text-transform: uppercase;
+        transition: background .5s;
+        cursor: pointer;
+        opacity: .7;
+        padding: 3px 0;
+        &:hover {
+            background: darken(gainsboro, 10%);
+        }
+    }
+    .field {
+        display: none;
+    }
+}
