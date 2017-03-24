@@ -1,0 +1,23 @@
+<!-- 24-29th of june  -->
+
+<% @events.each_with_index do |event, i| %>
+
+<% if @events[i].date.to_date != @events[i-1].date.to_date %>
+	<br><br><%= @events[i].date.strftime("%^A") %><br><br>
+<% end %>
+
+	<!-- This declares the next event -->	
+	<% if (@events[i].date.to_date === Date.today.to_date) && (@events[i+1].date <= Time.now.in_time_zone('Hawaii') && @events[i-1].date >= Time.now.in_time_zone('Hawaii')) %>
+		<div style="color:blue">
+	<% else %>
+		<div>
+	<% end %>
+
+	<!-- Event details -->
+	<%= @events[i].date.strftime("%HH%M") %>
+	<%= @events[i].title %>
+	<%= @events[i].subtitle rescue nil %>
+	<%= @events[i].description rescue nil %>
+</div><br>
+
+<% end %>
