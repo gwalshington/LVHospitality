@@ -1,0 +1,725 @@
+@font-face {
+  font-family: "futura";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/futura.woff2") format("woff2"), url("fonts/futura.woff") format("woff"), url("fonts/futura.ttf") format("truetype");
+}
+@font-face {
+  font-family: "futuraLight";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/futura_light.ttf") format("truetype");
+}
+/* line 5, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/application.scss */
+html, body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background: black url("background.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'futura', sans-serif;
+}
+
+/* line 15, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/application.scss */
+* {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+                   /* Non-prefixed version, currently
+supported by Chrome and Opera */
+}
+
+/* line 25, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/application.scss */
+#welcome, #guide {
+  padding-top: 85px;
+}
+
+/* line 1, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_login.scss */
+#login {
+  white-space: nowrap;
+  text-align: center;
+}
+/* line 4, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_login.scss */
+#login:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+}
+/* line 11, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_login.scss */
+#login form {
+  display: inline-block;
+  vertical-align: middle;
+  width: 80%;
+  max-width: 300px;
+}
+/* line 16, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_login.scss */
+#login form input {
+  background: none;
+  appearance: none;
+  border: none;
+  border-bottom: 1px solid gainsboro;
+  margin-bottom: 30px;
+  border-radius: 0;
+  box-sizing: border-box;
+  padding-bottom: 8px;
+  color: gainsboro;
+}
+/* line 26, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_login.scss */
+#login form input::placeholder {
+  text-transform: uppercase;
+}
+/* line 29, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_login.scss */
+#login form input:focus::placeholder {
+  color: transparent;
+}
+/* line 33, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_login.scss */
+#login form img {
+  max-width: 40%;
+  display: block;
+  margin: 0 auto 80px;
+}
+/* line 38, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_login.scss */
+#login form input, #login form #button {
+  display: block;
+  width: 100%;
+  letter-spacing: 2px;
+  font-size: 17px;
+  font-family: 'futura', sans-serif;
+}
+/* line 44, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_login.scss */
+#login form input:focus, #login form #button:focus {
+  outline: none;
+}
+/* line 50, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_login.scss */
+#login #button {
+  background: gainsboro;
+  color: black;
+  appearance: none;
+  border: none;
+  text-transform: uppercase;
+  transition: background .5s;
+  cursor: pointer;
+  opacity: .7;
+  padding: 3px 0;
+}
+/* line 60, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_login.scss */
+#login #button:hover {
+  background: #c3c3c3;
+}
+/* line 64, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_login.scss */
+#login .field {
+  display: none;
+}
+
+/* line 1, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_nav.scss */
+header {
+  background: black;
+  font-family: 'futura', sans-serif;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  z-index: 10000;
+}
+/* line 9, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_nav.scss */
+header img {
+  height: 40px;
+  padding: 20px;
+}
+/* line 13, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_nav.scss */
+header nav {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .5s;
+}
+/* line 17, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_nav.scss */
+header nav a {
+  display: block;
+  padding: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #c8c8c8;
+}
+/* line 24, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_nav.scss */
+header nav a.current {
+  color: white;
+}
+/* line 29, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_nav.scss */
+header button {
+  height: 40px;
+  width: 40px;
+  background: none;
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+/* line 40, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_nav.scss */
+header button span {
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 6px;
+  right: 6px;
+  height: 3px;
+  background: white;
+  transition: background 0s 0.2s;
+}
+/* line 49, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_nav.scss */
+header button span:before, header button span:after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  content: "";
+  transition-duration: 0.2s, 0.2s;
+  transition-delay: 0.2s, 0s;
+}
+/* line 60, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_nav.scss */
+header button span:before {
+  top: -10px;
+  transition-property: top, transform;
+}
+/* line 65, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_nav.scss */
+header button span:after {
+  bottom: -10px;
+  transition-property: bottom, transform;
+}
+/* line 71, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_nav.scss */
+header button.active span {
+  background: none;
+}
+/* line 73, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_nav.scss */
+header button.active span:before, header button.active span:after {
+  top: 0;
+  bottom: 0;
+  transition-delay: 0s, 0.2s;
+}
+/* line 78, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_nav.scss */
+header button.active span:before {
+  transform: rotate(45deg);
+}
+/* line 81, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_nav.scss */
+header button.active span:after {
+  transform: rotate(-45deg);
+}
+/* line 85, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_nav.scss */
+header button.active + nav {
+  max-height: 700px;
+}
+
+@media only screen and (min-width: 767px) {
+  /* line 94, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_nav.scss */
+  header button {
+    display: none;
+  }
+  /* line 97, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_nav.scss */
+  header nav {
+    max-height: initial;
+    position: absolute;
+    top: 12px;
+    right: 0;
+  }
+  /* line 102, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_nav.scss */
+  header nav a {
+    display: inline-block;
+  }
+}
+/* line 1, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_welcome.scss */
+aside#welcome {
+  text-align: center;
+  color: white;
+}
+/* line 4, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_welcome.scss */
+aside#welcome > * {
+  width: 85%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+/* line 9, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_welcome.scss */
+aside#welcome h1 {
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 35px;
+  padding-top: 50px;
+}
+/* line 16, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_welcome.scss */
+aside#welcome #weather {
+  font-size: 90px;
+  line-height: 0.9;
+  margin-top: 20px;
+}
+/* line 20, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_welcome.scss */
+aside#welcome #weather img {
+  height: 50px;
+}
+/* line 23, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_welcome.scss */
+aside#welcome #weather span {
+  font-weight: normal;
+}
+/* line 27, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_welcome.scss */
+aside#welcome nav {
+  padding-top: 15px;
+  width: 55%;
+}
+/* line 30, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_welcome.scss */
+aside#welcome nav a {
+  color: white;
+  display: block;
+  text-decoration: none;
+  margin: 20px 0;
+  padding: 7px 0;
+  border: 2px solid white;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  transition: .3s;
+  z-index: 1000;
+}
+/* line 42, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_welcome.scss */
+aside#welcome nav a:after {
+  position: absolute;
+  -webkit-transition: .3s;
+  transition: .3s;
+  content: '';
+  width: 0;
+  bottom: 0;
+  background: #f7f7f7;
+  height: 120%;
+  left: -10%;
+  transform: skewX(15deg);
+  z-index: -1;
+}
+/* line 55, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_welcome.scss */
+aside#welcome nav a:hover {
+  cursor: pointer;
+  color: black;
+}
+/* line 58, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_welcome.scss */
+aside#welcome nav a:hover:after {
+  left: -10%;
+  width: 120%;
+}
+/* line 65, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_welcome.scss */
+aside#welcome #liason {
+  text-transform: uppercase;
+  margin: 50px auto;
+}
+/* line 68, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_welcome.scss */
+aside#welcome #liason > * {
+  display: block;
+  letter-spacing: 1px;
+}
+/* line 72, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_welcome.scss */
+aside#welcome #liason img {
+  width: 130px;
+  margin: 10px auto;
+  border-radius: 100%;
+  border: 5px solid white;
+}
+/* line 78, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_welcome.scss */
+aside#welcome #liason span {
+  font-size: 10px;
+}
+/* line 82, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_welcome.scss */
+aside#welcome #powered {
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+}
+/* line 87, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_welcome.scss */
+aside#welcome #powered img {
+  height: 10px;
+  display: block;
+  margin: 5px auto 0;
+}
+
+@media only screen and (min-width: 767px) {
+  /* line 96, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_welcome.scss */
+  aside#welcome {
+    width: 60%;
+    float: left;
+    height: 100%;
+    overflow: scroll;
+    box-sizing: border-box;
+  }
+}
+/* line 1, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_itinerary.scss */
+section#itinerary {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px 0;
+}
+/* line 4, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_itinerary.scss */
+section#itinerary ul {
+  border-left: 10px solid rgba(220, 220, 220, 0.7);
+  list-style-type: none;
+  padding-left: 30px;
+  max-width: 70%;
+  margin: 0 auto;
+}
+/* line 10, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_itinerary.scss */
+section#itinerary ul li {
+  background: rgba(220, 220, 220, 0.7);
+  position: relative;
+  color: white;
+  text-transform: uppercase;
+  margin: 15px 0;
+}
+/* line 16, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_itinerary.scss */
+section#itinerary ul li h3, section#itinerary ul li h4, section#itinerary ul li p {
+  margin: 0;
+}
+/* line 19, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_itinerary.scss */
+section#itinerary ul li.day {
+  text-align: center;
+  padding: 3px;
+}
+/* line 23, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_itinerary.scss */
+section#itinerary ul li.event {
+  padding: 10px;
+}
+/* line 25, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_itinerary.scss */
+section#itinerary ul li.event:after {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-right-color: rgba(220, 220, 220, 0.7);
+  border-width: 15px;
+  margin-top: -15px;
+}
+/* line 38, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_itinerary.scss */
+section#itinerary ul li.event:before {
+  content: "";
+  height: 25px;
+  width: 25px;
+  background-image: url("dot.svg");
+  display: block;
+  right: calc(100% + 22.5px);
+  top: 50%;
+  position: absolute;
+  background-size: 25px 25px;
+  margin-top: -12.5px;
+}
+/* line 50, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_itinerary.scss */
+section#itinerary ul li.event.current {
+  background: rgba(56, 139, 186, 0.7);
+}
+/* line 52, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_itinerary.scss */
+section#itinerary ul li.event.current:after {
+  border-right-color: rgba(56, 139, 186, 0.7);
+}
+/* line 55, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_itinerary.scss */
+section#itinerary ul li.event.current:before {
+  background-image: url("current.svg");
+}
+/* line 59, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_itinerary.scss */
+section#itinerary ul li.event p {
+  font-size: 14px;
+}
+
+@media only screen and (min-width: 767px) {
+  /* line 68, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_itinerary.scss */
+  section#itinerary {
+    width: 40%;
+    float: left;
+    padding-top: 85px;
+    height: 100%;
+    overflow: scroll;
+    box-sizing: border-box;
+  }
+  /* line 75, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_itinerary.scss */
+  section#itinerary ul {
+    margin-top: 50px;
+  }
+}
+/* line 2, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_guide.scss */
+#guide article {
+  border-width: 0 10px;
+  border-style: solid;
+  box-shadow: 0px 5000px 0px rgba(0, 0, 0, 0.45) inset;
+}
+/* line 6, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_guide.scss */
+#guide article:first-of-type {
+  border-top: 10px solid white;
+}
+/* line 9, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_guide.scss */
+#guide article:last-of-type {
+  border-bottom: 10px solid white;
+}
+/* line 12, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_guide.scss */
+#guide article p {
+  transition: opacity .5s, max-height .5s, padding .5s ease-in-out;
+}
+/* line 17, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_guide.scss */
+#guide article, #guide aside {
+  cursor: pointer;
+  padding: 50px 25px;
+  color: white;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center 30% !important;
+}
+/* line 24, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_guide.scss */
+#guide article div, #guide aside div {
+  max-width: 600px;
+  width: 95%;
+  margin: 0 auto;
+}
+/* line 29, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_guide.scss */
+#guide article h2, #guide aside h2 {
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 4.5px;
+  font-size: 14px;
+  text-align: center;
+  font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+  text-transform: uppercase;
+  user-select: none;
+}
+/* line 39, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_guide.scss */
+#guide article p, #guide aside p {
+  line-height: 20px;
+  font-size: 14px;
+  max-height: 0;
+  margin: 0;
+  overflow: hidden;
+  opacity: 0;
+  font-family: "Lato", sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  text-align: center;
+}
+/* line 51, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_guide.scss */
+#guide article span, #guide aside span {
+  display: block;
+  font-weight: lighter;
+  font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding-bottom: 20px;
+  transform: translateZ(0);
+  user-select: none;
+}
+/* line 63, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_guide.scss */
+#guide article.open p, #guide aside.open p {
+  max-height: 1000px;
+  padding-top: 25px;
+  opacity: 1;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+/* line 71, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_guide.scss */
+#guide article.open, #guide article:not(.open):hover {
+  box-shadow: 0px 5000px 0px rgba(0, 0, 0, 0.7) inset;
+}
+/* line 75, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_guide.scss */
+#guide aside {
+  padding: 10px !important;
+  height: 100px;
+  display: table;
+  width: 100%;
+  cursor: default !important;
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+/* line 84, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_guide.scss */
+#guide aside p {
+  max-height: 20em;
+  opacity: 1;
+  padding-top: 25px;
+}
+/* line 89, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_guide.scss */
+#guide aside div {
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 93, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_guide.scss */
+#guide aside h2 {
+  font-size: 20px;
+  letter-spacing: 5px;
+}
+
+@media only screen and (min-width: 767px) {
+  /* line 102, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_guide.scss */
+  #guide article, #guide aside {
+    padding: 50px;
+    transition: padding .5s;
+  }
+  /* line 106, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_guide.scss */
+  #guide article p span {
+    font-size: 14px;
+  }
+  /* line 109, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_guide.scss */
+  #guide article.open, #guide aside.open {
+    padding: 120px 50px;
+  }
+  /* line 112, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_guide.scss */
+  #guide aside {
+    height: 120px;
+  }
+  /* line 115, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_guide.scss */
+  #guide aside h2 {
+    font-size: 25px;
+    letter-spacing: 7px;
+  }
+  /* line 119, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_guide.scss */
+  #guide section:last-of-type {
+    margin-bottom: 0;
+  }
+}
+/* line 1, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_map.scss */
+#map {
+  width: 100vw;
+  height: calc(100vh - 59px);
+}
+/* line 4, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_map.scss */
+#map + #powered {
+  color: white;
+  width: 100%;
+  margin: 0;
+  padding: 10px 0;
+  background: black;
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+/* line 15, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_map.scss */
+#map + #powered img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 22, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_map.scss */
+a[href^="http://maps.google.com/maps"] {
+  display: none !important;
+}
+
+/* line 23, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_map.scss */
+a[href^="https://maps.google.com/maps"] {
+  display: none !important;
+}
+
+/* line 25, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_map.scss */
+.gmnoprint a, .gmnoprint span, .gm-style-cc, .gm-svpc {
+  display: none;
+}
+
+/* line 1, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_contact.scss */
+#contactModalbg, #contactModal {
+  opacity: 0;
+  transition: opacity .4s;
+  height: 0;
+  overflow: hidden;
+}
+
+/* line 8, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_contact.scss */
+body.contact {
+  overflow: hidden;
+}
+/* line 10, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_contact.scss */
+body.contact #contactModalbg, body.contact #contactModal {
+  opacity: 1;
+  transition: opacity .4s;
+  z-index: 1000;
+  height: auto;
+  overflow: visible;
+}
+/* line 17, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_contact.scss */
+body.contact #contactModalbg {
+  height: 100%;
+  width: 100%;
+  box-shadow: 0px 5000px 0px rgba(0, 0, 0, 0.6) inset;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+/* line 25, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_contact.scss */
+body.contact #contactModal {
+  background: rgba(255, 255, 255, 0.9);
+  height: 300px;
+  width: 80%;
+  max-width: 250px;
+  margin: auto;
+  position: fixed;
+  top: 85px;
+  left: 0;
+  bottom: -65px;
+  right: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* line 35, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_contact.scss */
+body.contact #contactModal > * {
+  max-width: 80%;
+  margin: 20px auto;
+}
+/* line 39, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_contact.scss */
+body.contact #contactModal h2 {
+  font-weight: lighter;
+  font-size: 35px;
+  margin-top: 10px;
+  letter-spacing: 3px;
+}
+/* line 44, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_contact.scss */
+body.contact #contactModal h2 span {
+  display: block;
+  font-weight: lighter;
+  font-size: 15px;
+}
+/* line 50, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_contact.scss */
+body.contact #contactModal button {
+  appearance: none;
+  background: black;
+  font-family: 'futura', sans-serif;
+  color: white;
+  border: none;
+  padding: 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  width: 100%;
+}
+/* line 63, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_contact.scss */
+body.contact #contactModal img {
+  width: 130px;
+  margin-top: -65px;
+  border-radius: 100%;
+  border: 5px solid white;
+  margin-bottom: 0;
+}
+/* line 70, /Users/walshcostigan/LVHospitality/LVHospitality/app/assets/stylesheets/_contact.scss */
+body.contact #contactModal hr {
+  width: 60%;
+  border: none;
+  border-top: 1px solid black;
+  background-color: transparent;
+}
