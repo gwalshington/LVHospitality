@@ -35,6 +35,31 @@ aside#welcome {
             padding: 7px 0;
             border: 2px solid white;
             text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+            transition: .3s;
+            z-index: 1000;
+            &:after {
+                position: absolute;
+                -webkit-transition: .3s;
+                transition: .3s;
+                content: '';
+                width: 0;
+                bottom: 0;
+                background: #f7f7f7;
+                height: 120%;
+                left: -10%;
+                transform: skewX(15deg);
+                z-index: -1;
+            }
+            &:hover {
+                cursor: pointer;
+                color: black;
+                &:after {
+                    left: -10%;
+                    width: 120%;
+                }
+            }
         }
     }
     #liason {
