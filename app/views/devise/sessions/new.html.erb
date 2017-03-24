@@ -1,6 +1,6 @@
 <body id="login">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <%= asset_path("logo.png") %>
+        <%= image_path("logo.png") %>
         # <img src="assets/images/logo.png" />
         <%= f.email_field :email, placeholder: "Email" %>
         <%= f.password_field :password, autocomplete: "off", placeholder: "Password" %>
