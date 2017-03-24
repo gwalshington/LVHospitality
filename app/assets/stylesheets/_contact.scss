@@ -1,6 +1,8 @@
 #contactModalbg, #contactModal {
     opacity: 0;
     transition: opacity .4s;
+    height: 0;
+    overflow: hidden;
 }
 
 body.contact {
@@ -9,6 +11,8 @@ body.contact {
         opacity: 1;
         transition: opacity .4s;
         z-index: 1000;
+        height: auto;
+        overflow: visible;
     }
     #contactModalbg {
         height: 100%;
@@ -24,7 +28,7 @@ body.contact {
         width: 80%;
         max-width: 250px;
         margin: auto;
-        position: absolute;
+        position: fixed;
         top: 85px; left: 0; bottom: -65px; right: 0;
         text-align: center;
         text-transform: uppercase;
