@@ -1,7 +1,7 @@
 <body id="login">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <%= image_path("logo.png") %>
-        # <img src="assets/images/logo.png" />
+        <%= image_tag("logo.png") %>
+        
         <%= f.email_field :email, placeholder: "Email" %>
         <%= f.password_field :password, autocomplete: "off", placeholder: "Password" %>
         <% if devise_mapping.rememberable? -%>
@@ -12,5 +12,5 @@
         <% end -%>
         <%= f.submit "Log in", id: 'button' %>
     <% end %>
-    <!--<%= render "devise/shared/links" %>-->
+    <!--<%#= render "devise/shared/links" %>-->
 </body>

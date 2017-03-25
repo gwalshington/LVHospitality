@@ -13,10 +13,10 @@
 				<% if ((@events[i].date.to_date === Date.today.to_date) && (@events[i+1].date.to_date === Date.today.to_date) && (@events[i+1].date >= Time.now) && ((@events[i-1].date.to_date === Date.today.to_date) && (@events[i-1].date <= Time.now))) %>
 
 					 <li class="current event">
-					 	<%= @events[i].date %><br>
-					 	<%= Time.now.in_time_zone('Hawaii')%><br>
-					 	<%= @events[i-1].date %><%= @events[i-1].title %><br>
-					 	<%= @events[i+1].date %><%= @events[i+1].title %><br>
+					 	<%#= @events[i].date %><br>
+					 	<%#= Time.now.in_time_zone('Hawaii')%><br>
+					 	<%#= @events[i-1].date %><%= @events[i-1].title %><br>
+					 	<%#= @events[i+1].date %><%= @events[i+1].title %><br>
 						
 				<% else %>
 					 <li class="event">
