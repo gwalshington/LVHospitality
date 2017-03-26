@@ -6,14 +6,12 @@
 	<% @events.each_with_index do |event, i| %>
 
 		<% if @events[i].date.to_date != @events[i-1].date.to_date %>
-			<% if @events[i].date.to_date === Date.today %>
-			<li class="day">Today</li>
-			<% elsif @events[i].date.to_date === Date.tomorrow %>
-
-			<li class="day">Tomorrow</li>
+			<% if @events[i].date.to_date === Time.now.in_time_zone('Hawaii').to_date %>
+				<li class="day">Today</li>	
+			<% elsif @events[i].date.to_date === Date.tomorrow.in_time_zone('Hawaii') %>
+				<li class="day">Tomorrow</li>
 			<% else %>
-			<li class="day"><%= @events[i].date.strftime("%^A") %></h3>
-
+				<li class="day"><%= @events[i].date.strftime("%^A") %></h3>
 			<% end %>
 		<% end %>
 
@@ -21,20 +19,16 @@
 		<% if @events[i+1] != nil && @events[i] != @events[0] %>
 			<% if (
 					# If the current event is today
-					(@events[i].date.to_date === Date.today.to_date) && 
+					(@events[i].date.to_date === Date.today.to_date.in_time_zone('Hawaii')) && 
 					#If the current event is greater than Time.plus1hour
-					(@events[i].date >= (Time.now.in_time_zone('Hawaii')) )&&
+					(@events[i].date >= (Time.now.in_time_zone('Hawaii').to_date) )&&
 					#The next event is greater than Time.now
-					(@events[i+1].date >= Time.now.in_time_zone('Hawaii')) &&
+					(@events[i+1].date >= Time.now.in_time_zone('Hawaii').to_date) &&
 					
 					#If the last event is less than Time.now
-					(@events[i-1].date <= Time.now.in_time_zone('Hawaii'))
+					(@events[i-1].date <= Time.now.in_time_zone('Hawaii').to_date)
 				  ) %>
-					 <li class="current event">Current
-					 	<%#= @events[i].date %>
-					 	<%#= Time.now.in_time_zone('Hawaii')%>
-					 	<%#= @events[i-1].date %><%#= @events[i-1].title %>
-					 	<%#= @events[i+1].date %><%#= @events[i+1].title %>
+					 <li class="current event">
 			<% else %>
 				 <li class="event">
 			<% end %>
@@ -42,9 +36,9 @@
 <!-- 					If this is the last event -->				
 		<% elsif @events[i+1] === nil %>
 
-				<% if ((@events[i].date.to_date === Date.today.to_date) && ((@events[i-1].date.to_date === Date.today.to_date) && (@events[i-1].date <= Time.now))) %>
+				<% if ((@events[i].date.to_date === Time.now.in_time_zone('Hawaii').to_date) && ((@events[i-1].date.to_date === Time.now.in_time_zone('Hawaii').to_date) && (@events[i-1].date <= Time.now.in_time_zone('Hawaii').to_date))) %>
 
-				 <li class="current event">last
+				 <li class="current event">
 					
 				<% else %>
 					 <li class="event">
@@ -55,13 +49,13 @@
 		<% elsif @events[i] === @events.first %>
 				<% if (
 					#If the event is today
-					(@events[i].date.to_date === Date.today.to_date) && 
+					(@events[i].date.to_date === Time.now.in_time_zone('Hawaii').to_date) && 
 					#and the event is less than Time.no+1 hour
-					(@events[i].date <= (Time.now+1*60*60)) &&
-					(@events[i+1].date.to_date >= Time.now)
+					(@events[i].date <= (Time.now.in_time_zone('Hawaii')+1*60*60)) &&
+					(@events[i+1].date.to_date >= Time.now.in_time_zone('Hawaii').to_date)
 					) %>
 
-				 <li class="current event">first
+				 <li class="current event">
 					
 				<% else %>
 					 <li class="event">
@@ -74,6 +68,7 @@
 
 				<!-- Event details -->
 				<h3><%= @events[i].date.strftime("%HH%M") %></h3>
+				<h3><%= @events[i].date %></h3>
 				<h4><%= @events[i].title %></h4>
 				<p><%= @events[i].subtitle rescue nil %></p>
 				<p><%= @events[i].description rescue nil %></p>
