@@ -17,6 +17,8 @@ class ProfilesController < ApplicationController
   def admin
     authenticate_admin
 
+    @events = Event.all
+
   end
 
   # GET /profiles/1
