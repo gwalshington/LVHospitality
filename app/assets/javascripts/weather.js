@@ -1,5 +1,5 @@
 var weatherApiKey = "1181bab21c49ceb7970b096c0cd74c56"
-var honoluluApiUrl = "https://api.openweathermap.org/data/2.5/weather?zip=96818&units=imperial&appid=1181bab21c49ceb7970b096c0cd74c56"
+var honoluluApiUrl = "http://api.openweathermap.org/data/2.5/weather?zip=96818&units=imperial&appid=1181bab21c49ceb7970b096c0cd74c56"
 var newYorkApiUrl = "http://api.openweathermap.org/data/2.5/weather?q=NewYork&units=imperial&appid=1181bab21c49ceb7970b096c0cd74c56"
 
 
