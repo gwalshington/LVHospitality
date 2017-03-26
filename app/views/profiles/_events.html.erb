@@ -52,7 +52,7 @@
 							(@events[i].date.to_date === Time.now.in_time_zone('Hawaii').to_date) && 
 							#and the event is less than Time.no+1 hour
 							(@events[i].date <= (Time.now.in_time_zone('Hawaii')+1*60*60)) &&
-							(@events[i+1].date.to_date >= Time.now.in_time_zone('Hawaii').to_date)
+							(@events[i+1].date >= Time.now.in_time_zone('Hawaii'))
 							) %>
 
 						 <li class="current event">
