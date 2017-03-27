@@ -7,8 +7,9 @@ header {
     left: 0;
     z-index: 10000;
     img {
-        height: 40px;
-        padding: 20px;
+        height: 15px;
+        padding: 20px 20px;
+        display: block;
     }
     nav {
         max-height: 0;
@@ -16,10 +17,11 @@ header {
         transition: max-height .5s;
         a {
             display: block;
-            padding: 20px;
+            padding: 15px;
             text-transform: uppercase;
             letter-spacing: 1px;
             text-decoration: none;
+            font-size: 12px;
             color: rgb(200,200,200);
             &.current {
                 color: white;
@@ -30,20 +32,20 @@ header {
         }
     }
     button {
-        height: 40px;
-        width: 40px;
+        height: 30px;
+        width: 35px;
         background: none;
         appearance: none;
         border: none;
         cursor: pointer;
         padding: 0;
         position: absolute;
-        right: 20px;
-        top: 20px;
+        right: 15px;
+        top: 10px;
         span {
             display: block;
             position: absolute;
-            top: 20px;
+            top: 15px;
             left: 6px;
             right: 6px;
             height: 3px;
@@ -61,12 +63,12 @@ header {
                     transition-delay: 0.2s, 0s;
             }
             &:before {
-                top: -10px;
+                top: -7px;
                 transition-property: top, transform;
             }
 
             &:after {
-                bottom: -10px;
+                bottom: -7px;
                 transition-property: bottom, transform;
             }
         }
@@ -100,7 +102,7 @@ header {
         nav {
             max-height: initial;
             position: absolute;
-            top: 12px;
+            top: 5px;
             right: 0;
             a {
                 display: inline-block;
