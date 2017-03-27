@@ -16,7 +16,7 @@ $.ajax({
 		//var conditionImage = result.data.weather.icon
 		console.log(temperature)
 
-		$('#js_conditionImage').attr("src","/assets/weather/" + conditionImage + ".svg")
+		//$('#js_conditionImage').attr("src","/assets/weather/" + conditionImage + ".svg")
 
 		$('#js_temperature').append(temperature)
 
