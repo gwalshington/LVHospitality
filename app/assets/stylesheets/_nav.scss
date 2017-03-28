@@ -102,12 +102,12 @@ header {
         nav {
             max-height: initial;
             position: absolute;
-            top: 5px;
+            top: 0;
             right: 0;
             a {
                 display: inline-block;
                 padding: 0;
-                margin: 20px;
+                margin: 20px 15px;
             }
         }
     }

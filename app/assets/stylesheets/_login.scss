@@ -15,11 +15,9 @@
         max-width: 300px;
         input {
             background: none;
-            appearance: none;
             border: none;
             border-bottom: 1px solid gainsboro;
             margin-bottom: 30px;
-            border-radius: 0;
             box-sizing: border-box;
             padding-bottom: 8px;
             color: gainsboro;
@@ -41,6 +39,8 @@
             letter-spacing: 2px;
             font-size: 17px;
             font-family: 'futura', sans-serif;
+            border-radius: 0;
+            appearance: none;
             &:focus {
                 outline: none;
             }
@@ -57,6 +57,7 @@
         cursor: pointer;
         opacity: .7;
         padding: 3px 0;
+        border-radius: 0;
         &:hover {
             background: darken(gainsboro, 10%);
         }
