@@ -29,13 +29,19 @@ var mapApi = "AIzaSyCqipnIe_n5L6Dg_HHPzcApx21xerEuu9o"
 						  content: content
 						});
 
-
+	        			var mapMarker = '/assets/marker-6404ca3ffc3e8078a2f8050070496ea95eed2803b04b3b61a725c304d2f3583b.png';
 	        			var markerPosition = {lat: result[i].lat, lng: result[i].lng}
 
 	        			var marker = new google.maps.Marker({
 
 				          position: markerPosition,
 				          map: map,
+				          icon: {
+					          url: mapMarker,
+					          scaledSize: new google.maps.Size(40, 40)
+					          
+					        },
+				          //icon: mapMarker,
 				          title: result[i].location_name
 				        });
 
@@ -53,9 +59,7 @@ var mapApi = "AIzaSyCqipnIe_n5L6Dg_HHPzcApx21xerEuu9o"
 
 	        })
 	        
-	      }
-
-	   
+	      }	   
 	    
 
 
