@@ -1,0 +1,2 @@
+module LiasonsHelper
+end
