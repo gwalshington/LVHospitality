@@ -1,3 +1,14 @@
 body#admin {
-
+    background: white;
+    #table_id_wrapper, h1, #newevent {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 90%;
+        display: block;
+    }
+    h1 {
+        text-align: center;
+        text-transform: uppercase;
+        margin: 30px auto 15px;
+    }
 }
