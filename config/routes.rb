@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   resources :events
   resources :locations
   resources :profiles
-  devise_for :users
+
+  devise_for :users, controllers: {registrations: "users/registrations"}
+
+ #devise_for :users
 
   root to: "profiles#index"
 
@@ -12,6 +15,8 @@ Rails.application.routes.draw do
   get '/contact', to: 'profiles#contact', as: '/contact'
 
   get '/map', to: 'locations#map', as: '/map'
+
+
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

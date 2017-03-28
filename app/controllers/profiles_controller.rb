@@ -7,7 +7,6 @@ class ProfilesController < ApplicationController
   def index
     @profiles = Profile.all
     @events = Event.where("user_id = ? AND date >= ?", current_user.id, Time.current.to_date).order('date ASC')
-    @liason = Liason.find(current_user.liason_id)
     #@24_events = Event.where("user_id = ? AND date >= ?", current_user.id, Date.today)
 
 

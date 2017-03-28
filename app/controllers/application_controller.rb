@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
 
   def authenticate_user
   	if user_signed_in?
+      @liason = Liason.find(current_user.liason_id)
 
   	else
   		redirect_to new_user_session_path
