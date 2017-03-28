@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @liason.first_name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @liason.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @liason.email %>
+</p>
+
+<p>
+  <strong>Photo path:</strong>
+  <%= @liason.photo_path %>
+</p>
+
+<%= link_to 'Edit', edit_liason_path(@liason) %> |
+<%= link_to 'Back', liasons_path %>

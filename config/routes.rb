@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :liasons
   resources :events
   resources :locations
   resources :profiles
