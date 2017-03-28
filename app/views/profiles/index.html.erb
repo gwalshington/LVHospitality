@@ -1,26 +1,25 @@
 <%= render partial: 'layouts/nav' %>
 <aside id="welcome">
-    <h1>Welcome back, <%= current_user.first_name %>!</h1>
-    <p>Here's an extensive look at the rest of your time with us in Honolulu.</p>
-    <h2 id="weather"><span id="js_temperature"></span><img id="js_conditionImage" /></h2>
-    <p>HONOLULU, HI</p>
+    <%= image_tag("logo.png") %>
+    <div class="welcomebox">
+        <h1>Welcome back,<br><%= current_user.first_name %>!</h1>
+        <h2 id="weather"><span id="js_temperature"></span><img id="js_conditionImage" /><p>HONOLULU, HI</p></h2>
+    </div>
     <nav>
-        <a href="http://us.louisvuitton.com/eng-us/stories/high-jewellery" target="_blank">LV High Jewelry</a>
-        <a>Hospitality Program</a>
-        <a>Location Guide</a>
         <a>Update Itinerary</a>
+        <%= link_to "Hospitality Guide", guide_path  %>
+        <%= link_to "Location Guide", map_path  %>
+        <a href="http://us.louisvuitton.com/eng-us/stories/high-jewellery" target="_blank">LV High Jewelry</a>
     </nav>
     <p id="liason">
-        <img src="images/user.png">
-        Robbie
-        <span>Your Vip Liason</span>
-    </p>
-    <p id="powered">
-        Powered By
-        <%= asset_path("q.svg") %>
-
-        
+        <%= image_tag("liasons/robbie.jpg") %>
+        <span>Robbie<br>Your Vip Liason</span>
     </p>
 </aside>
+<p id="powered">
+    Powered By
+    <%= image_tag("q.svg") %>
+</p>
 <%= render partial: 'events' %>
+
 <%= render partial: 'layouts/contact' %>

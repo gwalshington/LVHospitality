@@ -29,6 +29,7 @@ body.contact {
         max-width: 250px;
         margin: auto;
         position: fixed;
+        border-radius: 5px;
         top: 85px; left: 0; bottom: -65px; right: 0;
         text-align: center;
         text-transform: uppercase;
@@ -49,7 +50,7 @@ body.contact {
         }
         button {
             appearance: none;
-            background: black;
+            background: rgba(0,0,0,0.8);
             font-family: 'futura', sans-serif;
             color: white;
             border: none;
