@@ -108,6 +108,7 @@ aside#welcome {
             margin: 10px auto;
             border-radius: 100%;
             border: 5px solid white;
+            cursor: pointer;
         }
         span {
             font-size: 10px;
@@ -191,5 +192,8 @@ aside#welcome {
             bottom: 10px;;
             margin-bottom: 20px;
         }
+    }
+    #welcomeback {
+        overflow: hidden;
     }
 }
