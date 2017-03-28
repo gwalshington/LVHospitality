@@ -1,5 +1,6 @@
 class LiasonsController < ApplicationController
   before_action :set_liason, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user
 
   # GET /liasons
   # GET /liasons.json
