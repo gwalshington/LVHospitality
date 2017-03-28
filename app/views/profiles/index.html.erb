@@ -14,8 +14,8 @@
     </nav>
     <p id="liason">
         
-        <%= image_tag("liasons/robbie.jpg") %>
-        <span>Robbie<br>Your Vip Liason</span>
+        <%= image_tag("#{@liason.photo_path}") %>
+        <span><%= @liason.first_name %><br>Your Vip Liason</span>
     </p>
 </aside>
 <p id="powered">

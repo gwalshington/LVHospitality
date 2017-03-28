@@ -1,2 +1,3 @@
 class Liason < ApplicationRecord
+	
 end
