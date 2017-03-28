@@ -66,11 +66,13 @@ section#itinerary {
 
 @media only screen and (min-width : 767px)  {
     section#itinerary {
-        width: 40%;
+        width: 300px;
         float: left;
         padding-top: 85px;
         height: 100%;
         overflow: scroll;
+        position: absolute;
+        right: 0;
         box-sizing: border-box;
         ul {
             margin-top: 50px;

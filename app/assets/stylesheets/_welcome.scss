@@ -1,32 +1,63 @@
 aside#welcome {
     text-align: center;
     color: white;
+    position: relative;
+    > img {
+        padding-top: 30px;
+        width: 80%;
+        max-width: 300px;
+    }
     > * {
         width: 85%;
-        max-width: 400px;
+        max-width: 500px;
         margin: 0 auto;
     }
     h1 {
+        padding-top: 33px;
+        padding-bottom: 30px;
         font-weight: normal;
         text-transform: uppercase;
         letter-spacing: 2px;
-        font-size: 35px;
-        padding-top: 50px;
+        font-size: 17px;
+        text-align: left;
+        width: 63%;
+        float: left;
+        margin: 0;
+        box-sizing: border-box;
     }
     #weather {
-        font-size: 90px;
+        font-size: 35px;
         line-height: 0.9;
         margin-top: 20px;
+        text-align: right;
+        width: 37%;
+        float: left;
+        box-sizing: border-box;
+        margin: 0;
+        padding-top: 30px;
+        padding-bottom: 30px;
         img {
-            height: 50px;
+            height: 20px;
+            display: none;
         }
         span {
             font-weight: normal;
+            &:after {
+                content: "°";
+            }
+        }
+        p {
+            font-size: 10px;
+            margin: 0;
+            letter-spacing: 1px;
+            padding-top: 5px;
+            font-weight: lighter;
         }
     }
     nav {
-        padding-top: 15px;
-        width: 55%;
+        width: 80%;
+        max-width: 300px;
+        clear: both;
         a {
             color: white;
             display: block;
@@ -38,6 +69,8 @@ aside#welcome {
             position: relative;
             overflow: hidden;
             transition: .3s;
+            font-size: 12px;
+            letter-spacing: 1px;
             z-index: 1000;
             &:after {
                 position: absolute;
@@ -64,40 +97,97 @@ aside#welcome {
     }
     #liason {
         text-transform: uppercase;
-        margin: 50px auto;
+        margin: 20px auto;
         > * {
-            display: block;
+            display: inline-block;
             letter-spacing: 1px;
+            vertical-align: middle;
         }
         img {
-            width: 130px;
+            width: 100px;
             margin: 10px auto;
             border-radius: 100%;
             border: 5px solid white;
         }
         span {
             font-size: 10px;
+            text-align: left;
+            padding-left: 10px;
+            &:first-line {
+                font-size: 20px;
+            }
         }
     }
-    #powered {
+    + #powered {
         text-transform: uppercase;
         font-size: 10px;
         letter-spacing: 2px;
         margin-bottom: 50px;
+        color: white;
+        text-align: center;
         img {
             height: 10px;
             display: block;
             margin: 5px auto 0;
         }
     }
+    .welcomebox {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 370px) {
+    aside#welcome {
+        nav {
+            margin: 15px auto;
+        }
+        #liason {
+            margin: 25px auto;
+        }
+    }
+}
+
+@media only screen and (min-width: 400px) {
+    aside#welcome {
+        nav {
+            margin: 20px auto;
+        }
+        #liason {
+            margin: 35px auto;
+            img {
+                width: 130px;
+            }
+        }
+        > img {
+            padding-top: 40px;
+        }
+    }
 }
 
 @media only screen and (min-width : 767px)  {
     aside#welcome {
-        width: 60%;
+        width: calc(100% - 300px);
         float: left;
-        height: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
         overflow: scroll;
         box-sizing: border-box;
+        padding-top: 0;
+        #weather img {
+            display: inline-block;
+        }
+        #weather span {
+            &:after {
+                content: "";
+            }
+        }
+        + #powered {
+            width: calc(100% - 300px);
+            position: absolute;
+            bottom: 10px;;
+            margin-bottom: 20px;
+        }
     }
 }
