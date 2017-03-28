@@ -1,11 +1,11 @@
 <div id="contactModalbg"></div>
 <div id="contactModal">
-    <%= image_tag("liasons/robbie.jpg") %>
+    <%= image_tag(@liason.photo_path) %>
     <h2>
-        Robbie
+        <%= @liason.first_name %>
         <span>Your VIP Liason</span>
     </h2>
     <hr>
-    <a href="tel:8005551212">Call</a>
-    <a href="mailto:someone@example.com?Subject=Aloha" target="_top">Message</a>
+    <a href="tel:<%=@liason.phone%>">Call</a>
+    <a href="mailto:<%=@liason.email%>?Subject=Aloha" target="_top">Message</a>
 </div>
