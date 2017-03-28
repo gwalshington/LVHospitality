@@ -1,28 +1,28 @@
-<%= render partial: 'layouts/nav' %>
-<aside id="welcome">
-    
-    <%= image_tag("logo.png") %>
-    <div class="welcomebox">
-        <h1>Welcome back,<br><%= current_user.first_name %>!</h1>
-        <h2 id="weather"><span id="js_temperature"></span><img id="js_conditionImage" /><p>HONOLULU, HI</p></h2>
-    </div>
-    <nav>
-        <a>Update Itinerary</a>
-        <%= link_to "Hospitality Guide", guide_path  %>
-        <%= link_to "Location Guide", map_path  %>
-        <a href="http://us.louisvuitton.com/eng-us/stories/high-jewellery" target="_blank">LV High Jewelry</a>
-    </nav>
-    <p id="liason">
+<body id="welcomeback">
+    <%= render partial: 'layouts/nav' %>
+    <aside id="welcome">
         
-        <%= image_tag("#{@liason.photo_path}") %>
-        <span><%= @liason.first_name %><br>Your Vip Liason</span>
+        <%= image_tag("logo.png") %>
+        <div class="welcomebox">
+            <h1>Welcome back,<br><%= current_user.first_name %>!</h1>
+            <h2 id="weather"><span id="js_temperature"></span><img id="js_conditionImage" /><p>HONOLULU, HI</p></h2>
+        </div>
+        <nav>
+            <a id="updateitinerary">Update Itinerary</a>
+            <%= link_to "Hospitality Guide", guide_path  %>
+            <%= link_to "Location Guide", map_path  %>
+            <a href="http://us.louisvuitton.com/eng-us/stories/high-jewellery" target="_blank">LV High Jewelry</a>
+        </nav>
+        <p id="liason">
+            
+            <%= image_tag("#{@liason.photo_path}") %>
+            <span><%= @liason.first_name %><br>Your Vip Liason</span>
+        </p>
+    </aside>
+    <p id="powered">
+        Powered By
+        <%= image_tag("q.svg") %>
     </p>
-</aside>
-<p id="powered">
-    Powered By
-    <%= image_tag("q.svg") %>
-</p>
-<%= render partial: 'events' %>
-
-
-<%= render partial: 'layouts/contact' %>
+    <%= render partial: 'events' %>
+    <%= render partial: 'layouts/contact' %>
+</body>

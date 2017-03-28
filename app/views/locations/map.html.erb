@@ -1,8 +1,10 @@
-<%= render partial: 'layouts/nav' %>
-<div id="map"></div>
-<p id="powered">
-    Powered By
-    <%= image_tag("q.svg") %>
-</p>
-<%= render partial: 'layouts/contact' %>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqipnIe_n5L6Dg_HHPzcApx21xerEuu9o&callback=initMap"></script>
+<body id="mappage">
+    <%= render partial: 'layouts/nav' %>
+    <div id="map"></div>
+    <p id="powered">
+        Powered By
+        <%= image_tag("q.svg") %>
+    </p>
+    <%= render partial: 'layouts/contact' %>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqipnIe_n5L6Dg_HHPzcApx21xerEuu9o&callback=initMap"></script>
+</body>
