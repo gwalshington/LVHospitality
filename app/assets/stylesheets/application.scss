@@ -1,6 +1,6 @@
 @import 'bourbon';
 @include font-face('futura', 'fonts/futura', $file-formats: ttf woff2 woff);
-@include font-face('futuraLight', 'fonts/futura_light', $file-formats: ttf);
+@include font-face('futuraLight', 'fonts/futura_light', $file-formats: ttf woff2 woff);
 
 html, body {
     margin: 0;

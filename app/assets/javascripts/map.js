@@ -258,13 +258,10 @@ var mapApi = "AIzaSyCqipnIe_n5L6Dg_HHPzcApx21xerEuu9o"
 				          title: result[i].location_name
 				        });
 
-
 				        google.maps.event.addListener(marker, 'click', function() {
 			    		   var title = this.title;
 						   infowindow.setContent('<h2 class="iw-heading">' + title + '</h2></div>');
 						   infowindow.open(map, this);
-						   
-						   
 						});
 
 	        		}

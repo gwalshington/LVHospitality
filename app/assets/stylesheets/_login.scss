@@ -19,14 +19,20 @@
             border-bottom: 1px solid gainsboro;
             margin-bottom: 30px;
             box-sizing: border-box;
-            padding-bottom: 8px;
+            letter-spacing: 1px;
+            padding: 4px 0;
             color: gainsboro;
+            font-weight: lighter;
             &::placeholder {
                 text-transform: uppercase;
             }
             &:focus::placeholder {
                 color: transparent;
             }
+            &:-webkit-autofill {
+                -webkit-box-shadow: 0 0 0px 1000px gainsboro inset;
+            }
+            
         }
         img {
             max-width: 40%;
@@ -36,7 +42,6 @@
         input, #button {
             display: block;
             width: 100%;
-            letter-spacing: 2px;
             font-size: 17px;
             font-family: 'futura', sans-serif;
             border-radius: 0;
@@ -52,6 +57,7 @@
         color: black;
         appearance: none;
         border: none;
+        letter-spacing: 2px;
         text-transform: uppercase;
         transition: background .5s;
         cursor: pointer;
