@@ -6,10 +6,15 @@ header {
     width: 100%;
     left: 0;
     z-index: 10000;
-    img {
+    > a {
         height: 15px;
-        padding: 20px 20px;
+        width: 120px;
+        margin: 20px 20px;
         display: block;
+        img {
+            height: 15px;
+            display: block;
+        }
     }
     nav {
         max-height: 0;

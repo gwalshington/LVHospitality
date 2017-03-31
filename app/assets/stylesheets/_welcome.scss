@@ -127,7 +127,7 @@ aside#welcome {
         color: white;
         text-align: center;
         img {
-            height: 10px;
+            height: 7px;
             display: block;
             margin: 5px auto 0;
         }
@@ -189,7 +189,7 @@ aside#welcome {
         + #powered {
             width: calc(100% - 300px);
             position: absolute;
-            bottom: 10px;;
+            bottom: 0;
             margin-bottom: 20px;
         }
     }
