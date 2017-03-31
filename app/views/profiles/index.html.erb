@@ -5,7 +5,34 @@
         <%= image_tag("logo.png") %>
         <div class="welcomebox">
             <h1>Welcome back,<br><%= current_user.first_name %>!</h1>
-            <h2 id="weather"><span id="js_temperature"></span><img id="js_conditionImage" /><p>HONOLULU, HI</p></h2>
+            <h2 id="weather"><span id="js_temperature">
+                <%= image_tag('weather/c01d.svg', id: 'c01d', style:"display:none")%>
+                <%= image_tag('weather/c01n.svg', id: 'c01n', style:"display:none")%>
+                <%= image_tag('weather/c02d.svg', id: 'c02d', style:"display:none")%>
+                <%= image_tag('weather/c02n.svg', id: 'c02n', style:"display:none")%>
+                <%= image_tag('weather/c03d.svg', id: 'c03d', style:"display:none")%>
+                <%= image_tag('weather/c03n.svg', id: 'c03n', style:"display:none")%>
+                <%= image_tag('weather/c03d.svg', id: 'c03d', style:"display:none")%>
+                <%= image_tag('weather/c03n.svg', id: 'c03n', style:"display:none")%>
+                
+                <%= image_tag('weather/c04d.svg', id: 'c04d', style:"display:none")%>
+                <%= image_tag('weather/c04n.svg', id: 'c04n', style:"display:none")%>
+                
+                <%= image_tag('weather/c09d.svg', id: 'c09d', style:"display:none")%>
+                <%= image_tag('weather/c09n.svg', id: 'c09n', style:"display:none")%>
+                                
+
+                <%= image_tag('weather/c10d.svg', id: 'c10d', style:"display:none")%>
+                <%= image_tag('weather/c10n.svg', id: 'c10n', style:"display:none")%>
+                
+                <%= image_tag('weather/c11d.svg', id: 'c11d', style:"display:none")%>
+                <%= image_tag('weather/c11n.svg', id: 'c11n', style:"display:none")%>
+                <%= image_tag('weather/c13d.svg', id: 'c13d', style:"display:none")%>
+                <%= image_tag('weather/c13n.svg', id: 'c13n', style:"display:none")%>
+                <%= image_tag('weather/c50d.svg', id: 'c50d', style:"display:none")%>
+                <%= image_tag('weather/c50n.svg', id: 'c50n', style:"display:none")%>
+
+            </span><img id="js_conditionImage" /><p>HONOLULU, HI</p></h2>
         </div>
         <nav>
             <a id="updateitinerary">Update Itinerary</a>
@@ -26,23 +53,3 @@
     <%= render partial: 'events' %>
     <%= render partial: 'layouts/contact' %>
 </body>
-
-<script type="text/javascript">
-
-var honoluluApiUrl = "https://api.weatherbit.io/v1.0/current?lat=21.3069&lon=-157.8583&key=873efaa027c14804ad5bd284b8cf72c0"
-
-$.ajax({
-    url: honoluluApiUrl,
-    type: 'GET',
-    success: function(result)   {
-        var conditionImage = result.data[0].weather.icon
-        var temperature = result.data[0].rh
-        
-        $('#js_conditionImage').attr("src","/assets/weather/" + conditionImage + ".svg")
-        $('#js_temperature').append(temperature)
-    },
-    error: function(error)  {
-        console.log(error)
-    }
-})
-</script>
