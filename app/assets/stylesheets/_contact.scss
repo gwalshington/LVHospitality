@@ -5,7 +5,7 @@
 }
 
 #contactModal {
-    bottom: -1000px;
+    bottom: -150%;
 }
 
 
@@ -57,6 +57,10 @@
         display: block;
         text-decoration: none;
         width: 100%;
+        transition: background .4s;
+        &:hover {
+            background: rgba(40,40,40,0.8);
+        }
     }
     img {
         width: 130px;
@@ -74,6 +78,7 @@
 }
 
 body.contact {
+    overflow: hidden;
     #contactModalbg, #contactModal {
         opacity: 1;
         transition: opacity .4s, bottom .2s;

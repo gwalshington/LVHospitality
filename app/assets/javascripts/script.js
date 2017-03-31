@@ -27,13 +27,13 @@ window.addEventListener("DOMContentLoaded", function() {
         document.querySelector('header #contact').addEventListener("click", function() {
             document.body.classList.toggle('contact');
         });
+        document.querySelector('#contactModalbg').addEventListener("click", function() {
+            document.body.classList.toggle('contact');
+        });
         document.querySelector('#updateitinerary').addEventListener("click", function() {
             document.body.classList.toggle('contact');
         });
         document.querySelector('#liason img').addEventListener("click", function() {
-            document.body.classList.toggle('contact');
-        });
-        document.querySelector('#contactModalbg').addEventListener("click", function() {
             document.body.classList.toggle('contact');
         });
     }
