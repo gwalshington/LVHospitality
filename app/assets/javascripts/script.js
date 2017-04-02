@@ -26,7 +26,7 @@ window.addEventListener("DOMContentLoaded", function() {
     function contact(){
         document.querySelector('header #contact').addEventListener("click", function() {
             document.body.classList.toggle('contact');
-            document.querySelector('header button').classList.toggle('active');
+            document.querySelector('header button').classList.remove('active');
         });
         document.querySelector('#contactModalbg').addEventListener("click", function() {
             document.body.classList.toggle('contact');
@@ -42,11 +42,14 @@ window.addEventListener("DOMContentLoaded", function() {
     
     /* Welcome Screen on Mobile */        
     
-    document.querySelector('header #itineraryNav').addEventListener("click", function() {
+    function mobile(){
         if(window.location.href.indexOf("itinerary") != -1){
             document.body.classList.add('itinerary');
         }
-        document.querySelector('header button').classList.toggle('active');
-    });
+        document.querySelector('header button').classList.remove('active');
+    }
+    
+    document.querySelector('#itineraryNav').addEventListener("click", mobile);
+    window.onload = mobile();
     
 }, false);
