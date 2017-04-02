@@ -330,6 +330,9 @@ var mapApi = "AIzaSyCqipnIe_n5L6Dg_HHPzcApx21xerEuu9o"
 				        google.maps.event.addListener(marker, 'click', function() {
 			    		   var title = this.title;
                            var phone = this.phone;
+                            if(phone === null){
+                                phone = ""
+                            }
                            var address = this.address;
                            console.log(phone);
 						   infowindow.setContent('<h2 class="iw-heading">' + title + '</h2>'+ address + phone +'</div>');
