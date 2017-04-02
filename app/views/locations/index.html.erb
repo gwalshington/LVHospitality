@@ -6,6 +6,8 @@
   <thead>
     <tr>
       <th>Location name</th>
+      <th>Phone</th>
+      <th>Address</th>
       <th>Lat</th>
       <th>Lng</th>
       <th colspan="3"></th>
@@ -16,6 +18,8 @@
     <% @locations.each do |location| %>
       <tr>
         <td><%= location.location_name %></td>
+        <td><%= location.phone %></td>
+        <td><%= location.address %></td>
         <td><%= location.lat %></td>
         <td><%= location.lng %></td>
         <td><%= link_to 'Show', location %></td>

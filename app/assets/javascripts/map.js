@@ -313,7 +313,6 @@ var mapApi = "AIzaSyCqipnIe_n5L6Dg_HHPzcApx21xerEuu9o"
 	        			var markerPosition = {lat: result[i].lat, lng: result[i].lng}
 
 	        			var marker = new google.maps.Marker({
-
 				          position: markerPosition,
 				          map: map,
 				          icon: {
@@ -322,12 +321,18 @@ var mapApi = "AIzaSyCqipnIe_n5L6Dg_HHPzcApx21xerEuu9o"
 					          
 					        },
 				          //icon: mapMarker,
-				          title: result[i].location_name
+				          title: result[i].location_name,
+                          phone: result[i].phone,
+                          address: result[i].address
 				        });
+                        console.log(result[i])
 
 				        google.maps.event.addListener(marker, 'click', function() {
 			    		   var title = this.title;
-						   infowindow.setContent('<h2 class="iw-heading">' + title + '</h2></div>');
+                           var phone = this.phone;
+                           var address = this.address;
+                           console.log(phone);
+						   infowindow.setContent('<h2 class="iw-heading">' + title + '</h2>'+ address + phone +'</div>');
 						   infowindow.open(map, this);
 						});
 
