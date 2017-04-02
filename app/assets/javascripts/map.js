@@ -13,31 +13,46 @@ var mapApi = "AIzaSyCqipnIe_n5L6Dg_HHPzcApx21xerEuu9o"
                         "elementType": "labels",
                         "stylers": [
                             {
-                                "visibility": "on"
+                                "visibility": "off"
                             },
                             {
-                                "color": "#ffffff"
+                                "color": "#f49f53"
                             }
                         ]
                     },
                     {
-                        "featureType": "all",
-                        "elementType": "labels.text",
+                        "featureType": "administrative",
+                        "elementType": "all",
                         "stylers": [
                             {
-                                "visibility": "on"
+                                "visibility": "simplified"
                             }
                         ]
                     },
                     {
-                        "featureType": "all",
-                        "elementType": "labels.text.stroke",
+                        "featureType": "administrative",
+                        "elementType": "geometry",
                         "stylers": [
                             {
                                 "visibility": "on"
                             },
                             {
-                                "color": "#9b9b9b"
+                                "color": "#cdb6b6"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative",
+                        "elementType": "labels",
+                        "stylers": [
+                            {
+                                "visibility": "simplified"
+                            },
+                            {
+                                "color": "#a37474"
+                            },
+                            {
+                                "saturation": "4"
                             }
                         ]
                     },
@@ -50,6 +65,36 @@ var mapApi = "AIzaSyCqipnIe_n5L6Dg_HHPzcApx21xerEuu9o"
                             },
                             {
                                 "lightness": -7
+                            },
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "landscape",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "landscape",
+                        "elementType": "labels",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "visibility": "off"
                             }
                         ]
                     },
@@ -141,6 +186,24 @@ var mapApi = "AIzaSyCqipnIe_n5L6Dg_HHPzcApx21xerEuu9o"
                         ]
                     },
                     {
+                        "featureType": "road",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "labels",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
                         "featureType": "road.local",
                         "elementType": "geometry.fill",
                         "stylers": [
@@ -176,6 +239,9 @@ var mapApi = "AIzaSyCqipnIe_n5L6Dg_HHPzcApx21xerEuu9o"
                         "stylers": [
                             {
                                 "lightness": 38
+                            },
+                            {
+                                "visibility": "off"
                             }
                         ]
                     },
@@ -215,6 +281,9 @@ var mapApi = "AIzaSyCqipnIe_n5L6Dg_HHPzcApx21xerEuu9o"
                             },
                             {
                                 "lightness": 43
+                            },
+                            {
+                                "visibility": "simplified"
                             }
                         ]
                     }

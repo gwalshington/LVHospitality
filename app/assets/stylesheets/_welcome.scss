@@ -97,7 +97,7 @@ aside#welcome {
     }
     #liason {
         text-transform: uppercase;
-        margin: 20px auto;
+        margin: 35px auto 25px;
         > * {
             display: inline-block;
             letter-spacing: 1px;
@@ -140,6 +140,10 @@ aside#welcome {
     }
 }
 
+body.itinerary aside#welcome {
+    display: none;
+}
+
 @media only screen and (min-width: 370px) {
     aside#welcome {
         nav {
@@ -157,7 +161,7 @@ aside#welcome {
             margin: 20px auto;
         }
         #liason {
-            margin: 35px auto;
+            margin: 35px auto 25px;
             img {
                 width: 130px;
             }
@@ -170,6 +174,7 @@ aside#welcome {
 
 @media only screen and (min-width : 767px)  {
     aside#welcome {
+        display: block !important;
         width: calc(100% - 300px);
         float: left;
         position: absolute;
