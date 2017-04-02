@@ -1,6 +1,22 @@
 @import 'bourbon';
-@include font-face('futura', 'fonts/futura', $file-formats: ttf woff2 woff);
-@include font-face('futuraLight', 'fonts/futura_light', $file-formats: ttf woff2 woff);
+
+@font-face {
+  font-family: 'futura';
+  src: font-url('futura.woff') format('woff'),
+    font-url('futura.woff2') format('woff2'),
+    font-url('futura.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'futuraLight';
+  src: font-url('futura_light.woff') format('woff'),
+    font-url('futura_light.woff2') format('woff2'),
+    font-url('futura_light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 html, body {
     margin: 0;
