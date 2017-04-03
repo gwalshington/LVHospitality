@@ -24,6 +24,14 @@ class ProfilesController < ApplicationController
   # GET /profiles/1.json
   def show
   end
+  
+  def itinerary
+    @profiles = Profile.all
+    @events = Event.where("user_id = ? AND date >= ?", current_user.id, Time.current.to_date).order('date ASC')
+    #@24_events = Event.where("user_id = ? AND date >= ?", current_user.id, Date.today)
+
+    
+  end
 
   # GET /profiles/new
   def new
