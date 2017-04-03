@@ -5,10 +5,10 @@ $.ajax({
     url: honoluluApiUrl,
     type: 'GET',
     success: function(result)   {
-        var conditionImage = "'#" + result.data[0].weather.icon + "'"
+        var conditionImage = "#" + result.data[0].weather.icon + ""
         var temperature = result.data[0].rh
 
-        $('#c01d').css({"display":"inline"})
+        $(conditionImage).css({"display":"inline"})
         $('#js_temperature').append(temperature)
 
 
