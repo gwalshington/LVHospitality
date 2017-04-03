@@ -14,4 +14,9 @@ body#admin {
     #background {
         display: none;
     }
+    #table_id {
+        tr > td:first-child + td {
+            text-transform: uppercase;
+        }
+    }
 }

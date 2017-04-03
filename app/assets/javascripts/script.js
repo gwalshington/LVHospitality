@@ -31,22 +31,27 @@ window.addEventListener("DOMContentLoaded", function() {
         document.querySelector('#contactModalbg').addEventListener("click", function() {
             document.body.classList.toggle('contact');
         });
-        document.querySelector('#updateitinerary').addEventListener("click", function() {
-            document.body.classList.toggle('contact');
-        });
-        document.querySelector('#liason img').addEventListener("click", function() {
-            document.body.classList.toggle('contact');
-        });
+        if(document.body.id==='welcomeback'){
+            document.querySelector('#updateitinerary').addEventListener("click", function() {
+                document.body.classList.toggle('contact');
+            });
+            document.querySelector('#liason img').addEventListener("click", function() {
+                document.body.classList.toggle('contact');
+            });
+        }
     }
     contact();
     
-    /* Welcome Screen on Mobile */        
+    /* Welcome Screen on Mobile */
     
     function mobile(){
-        if(window.location.href.indexOf("itinerary") != -1){
-            document.body.classList.add('itinerary');
-        }
+        setInterval(function(){
+            if(window.location.href.indexOf("itinerary") != -1){
+                document.body.classList.add('itinerary');
+            }
+        }, 100);
         document.querySelector('header button').classList.remove('active');
+        clearInterval(myVar);
     }
     
     document.querySelector('#itineraryNav').addEventListener("click", mobile);

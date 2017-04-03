@@ -57,7 +57,7 @@ section#itinerary {
                     margin-top: -12.5px;
                     opacity: 0.7;
                 }
-                &.current {
+                &.current, &:first-child {
                     background: rgba(56,139,186,0.7);
                     &:after {
                         border-right-color: rgba(56,139,186,0.7);
@@ -76,7 +76,7 @@ section#itinerary {
 
 body.itinerary section#itinerary {
     display: block;
-    padding-top: 55px;
+    padding-top: 85px;
 }
 
 body.itinerary #powered {
@@ -88,7 +88,7 @@ body.itinerary #powered {
         background: rgba(0,0,0,0.3);
         width: 300px;
         float: left;
-        padding-top: 85px;
+        padding-top: 45px;
         height: 100%;
         overflow: scroll;
         position: absolute;
