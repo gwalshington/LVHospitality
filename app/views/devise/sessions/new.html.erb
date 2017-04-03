@@ -11,6 +11,11 @@
             </div>
         <% end -%>
         <%= f.submit "Log in", id: 'button' %>
+
+        <%= link_to "Reset Password", new_password_path(resource) %>
+
     <% end %>
-    <!--<%#= render "devise/shared/links" %>-->
+    <!-- Sign up link -->
+   <%#= render "devise/shared/links" %>
+  <%#= link_to "Reset Password", edit_user_password_path %>
 </body>
