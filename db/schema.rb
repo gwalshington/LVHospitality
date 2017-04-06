@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170402202335) do
+ActiveRecord::Schema.define(version: 20170406210549) do
 
   create_table "events", force: :cascade do |t|
     t.datetime "date"
@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(version: 20170402202335) do
     t.string   "first_name"
     t.string   "last_name"
     t.integer  "liason_id"
+    t.boolean  "is_liason"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["liason_id"], name: "index_users_on_liason_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

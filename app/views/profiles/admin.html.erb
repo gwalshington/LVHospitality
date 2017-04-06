@@ -1,8 +1,8 @@
 <body id="admin">
-    
+    <% if current_user.is_admin === true %>
     <%= link_to 'Liasons', liasons_path %>
     <%= link_to 'Locations', locations_path %>
-
+    <% end %>
 
     <h1>Events</h1>
     <table id="table_id" class="display striped table-data" cellspacing="0" width="100%">
@@ -20,17 +20,19 @@
       </thead>
     
       <tbody>
-        <% @events.each do |event| %>
-          <tr>
-            <td><%= event.date %></td>
-            <td><%= event.title %></td>
-            <td><%= event.subtitle %></td>
-            <td><%= event.description %></td>
-            <td><%= event.user.first_name %></td>
-            <td><%= link_to 'Show', event %></td>
-            <td><%= link_to 'Edit', edit_event_path(event) %></td>
-            <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          </tr>
+        <% if @events.any? %>
+          <% @events.each do |event|  %>
+            <tr>
+              <td><%= event.date %></td>
+              <td><%= event.title %></td>
+              <td><%= event.subtitle %></td>
+              <td><%= event.description %></td>
+              <td><%= event.user.first_name %></td>
+              <td><%= link_to 'Show', event %></td>
+              <td><%= link_to 'Edit', edit_event_path(event) %></td>
+              <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
         <% end %>
       </tbody>
     </table>

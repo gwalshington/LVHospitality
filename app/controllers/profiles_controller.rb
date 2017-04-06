@@ -14,10 +14,17 @@ class ProfilesController < ApplicationController
   end
 
   def admin
-    authenticate_admin
+    #authenticate_admin
+    if current_user.is_admin === true
+      @events = Event.all
+    else
+      @name = current_user.first_name
+      @liason_id = Liason.where(first_name: @name).first.id
+      @liason_users = User.where(liason_id: @liason_id)
+      @events = Event.joins(:user).where("users.liason_id = ?", 1)
 
-    @events = Event.all
-
+      #@post = Post.joins(:taggings).where(taggings: {tag_id: 17})
+    end
   end
 
   # GET /profiles/1

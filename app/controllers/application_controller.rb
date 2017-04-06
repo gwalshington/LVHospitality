@@ -12,9 +12,11 @@ class ApplicationController < ActionController::Base
   end
 
   def authenticate_admin
-  	if current_user.is_admin != true
-  		redirect_to home_path
+  	if (current_user.is_admin != true) || (current_user.is_liason != true)
+  		redirect_to root_path
   	end
   end
+
+
 
 end

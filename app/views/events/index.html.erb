@@ -16,7 +16,7 @@
       </thead>
     
       <tbody>
-        <% @events.each do |event| %>
+        <% @events.each do |event| rescue nil%>
           <tr>
             <td><%= event.date %></td>
             <td><%= event.title %></td>

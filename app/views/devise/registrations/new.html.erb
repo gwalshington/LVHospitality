@@ -18,10 +18,20 @@
     <%= f.email_field :email %>
   </div>
 
-
+check_box
   <div class="field">
     <%= f.label :liason %>
     <%= f.collection_select(:liason_id, Liason.all, :id, :first_name) %>
+  </div>
+
+  <div class="field">
+    <%= f.label "This user is a liason" %><br />
+    <%= f.check_box :is_liason %>
+  </div>
+
+    <div class="field">
+    <%= f.label "This user is an admin" %><br />
+    <%= f.check_box :is_admin %>
   </div>
 
   <div class="field">
