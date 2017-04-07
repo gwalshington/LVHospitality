@@ -1,15 +1,10 @@
-#contactModalbg, #contactModal {
+#modalBG, #contactModal {
     opacity: 0;
     transition: opacity .4s, bottom .2s;
     pointer-events: none;
 }
 
-#contactModal {
-    bottom: -150%;
-}
-
-
-#contactModalbg {
+#modalBG {
     height: 100%;
     width: 100%;
     box-shadow: 0px 5000px 0px rgba(0, 0, 0, 0.6) inset;
@@ -26,7 +21,7 @@
     margin: auto;
     position: fixed;
     border-radius: 5px;
-    top: 85px; left: 0; right: 0;
+    top: 85px; left: 0; right: 0; bottom: -150%;
     text-align: center;
     text-transform: uppercase;
     > * {
@@ -79,14 +74,94 @@
 
 body.contact {
     overflow: hidden;
-    #contactModalbg, #contactModal {
+    #modalBG, #contactModal {
         opacity: 1;
         transition: opacity .4s, bottom .2s;
-        z-index: 1000;
+        z-index: 1005;
         overflow: visible;
         pointer-events: all;
     }
     #contactModal {
         bottom: -35px;
     }
+}
+
+#oahuModal, #fourseasonsModal {
+    background: rgba(255,255,255,0.9);
+    height: 210px;
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    position: fixed;
+    border-radius: 5px;
+    padding: 25vh 0;
+    top: 0; left: 0; right: 0; bottom: -150%;
+    text-align: center;
+    text-align: left;
+    opacity: 0;
+    img {
+        max-width: 100%;
+    }
+    p {
+        font-size: 13px;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    h6 {
+        font-size: 35px;
+        margin: 0 auto;
+        max-width: 90%;
+        font-weight: lighter;
+        text-transform: uppercase;
+    }
+}
+
+#fourseasonsModal {
+    height: 320px;
+    padding: 17vh 0;
+}
+
+@media only screen and (min-width: 400px) {
+    #fourseasonsModal {
+        height: 250px!important;
+    }
+}
+
+body.oahu {
+    overflow: hidden;
+    #modalBG, #oahuModal {
+        opacity: 1;
+        transition: opacity .4s, bottom .2s;
+        box-shadow: 0px 5000px 0px rgba(0, 0, 0, 0.5) inset;
+        color: white;
+        z-index: 1005;
+        overflow: visible;
+        pointer-events: all;
+    }
+    #oahuModal {
+         bottom: 0;
+         div > * {
+             max-width: 300px;
+             padding: 0 15px;
+         }
+    }
+}
+
+body.fourseasons {
+    #modalBG, #fourseasonsModal {
+        opacity: 1;
+        transition: opacity .4s, bottom .2s;
+        box-shadow: 0px 5000px 0px rgba(0, 0, 0, 0.5) inset;
+        color: white;
+        z-index: 1005;
+        overflow: visible;
+        pointer-events: all;
+    }
+    #fourseasonsModal {
+         bottom: 0;
+         div > * {
+             max-width: 300px;
+             padding: 0 15px;
+         }
+     }
 }

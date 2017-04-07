@@ -11,7 +11,6 @@
         <%= link_to "Itinerary", itinerary_path, id: "itineraryNav"  %>
         <%= link_to "Guide", guide_path  %>
         <%= link_to "Map", map_path  %>
-        <a href="http://us.louisvuitton.com/eng-us/stories/high-jewellery" target="_blank">LV High Jewlery</a>
         <a id="contact">Contact</a>
         <% if current_user.is_admin === true || current_user.is_liason === true %>
             <%= link_to "Admin", admin_path  %>

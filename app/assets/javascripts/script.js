@@ -28,8 +28,8 @@ window.addEventListener("DOMContentLoaded", function() {
             document.body.classList.toggle('contact');
             document.querySelector('header button').classList.remove('active');
         });
-        document.querySelector('#contactModalbg').addEventListener("click", function() {
-            document.body.classList.toggle('contact');
+        document.querySelector('#modalBG').addEventListener("click", function() {
+            document.body.removeAttribute("class");
         });
         if(document.body.id==='welcomeback'){
             document.querySelector('#updateitinerary').addEventListener("click", function() {
@@ -38,12 +38,17 @@ window.addEventListener("DOMContentLoaded", function() {
             document.querySelector('#liason img').addEventListener("click", function() {
                 document.body.classList.toggle('contact');
             });
+            document.querySelector('#oahu').addEventListener("click", function() {
+                document.body.classList.toggle('oahu');
+            });
+            document.querySelector('#fourseasons').addEventListener("click", function() {
+                document.body.classList.toggle('fourseasons');
+            });
         }
     }
     contact();
     
     /* Welcome Screen on Mobile */
-    
     function mobile(){
         setInterval(function(){
             if(window.location.href.indexOf("itinerary") != -1){
@@ -56,5 +61,5 @@ window.addEventListener("DOMContentLoaded", function() {
     
     document.querySelector('#itineraryNav').addEventListener("click", mobile);
     window.onload = mobile();
-    
+
 }, false);

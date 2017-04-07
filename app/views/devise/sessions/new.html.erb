@@ -1,6 +1,6 @@
 <body id="login">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <%= image_tag("lv.png") %>
+        <%= image_tag("lv_full.png") %>
         
         <%= f.email_field :email, placeholder: "Email" %>
         <%= f.password_field :password, autocomplete: "off", placeholder: "Password" %>
@@ -10,7 +10,7 @@
                 <%= f.label :remember_me %>
             </div>
         <% end -%>
-        <%= f.submit "Log in", id: 'button' %>
+        <%= f.submit "Login", id: 'button' %>
 
         <%= link_to "Reset Password", new_password_path(resource) %>
 

@@ -18,6 +18,8 @@ Rails.application.routes.draw do
 
   get '/itinerary', to: 'profiles#itinerary', as: '/itinerary'
   
+  get '/boutique', to: 'profiles#boutique', as: '/boutique'
+  
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -47,3 +47,93 @@ html, body {
 @import 'map';
 @import 'contact';
 @import 'admin';
+
+#resetpassword {
+    background: image-url('background.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    font-family: 'futura', sans-serif;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    &:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -0.25em;
+    }
+    h2 {
+        font-weight: lighter;
+        letter-spacing: 5px;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+    input {
+        background: none;
+        border: none;
+        border-bottom: 1px solid gainsboro;
+        margin-bottom: 30px;
+        box-sizing: border-box;
+        letter-spacing: 1px;
+        padding: 4px 0;
+        color: gainsboro;
+        font-size: 17px;
+        font-weight: lighter;
+        text-align: center;
+        &::placeholder {
+            text-transform: uppercase;
+        }
+        &:focus::placeholder {
+            color: transparent;
+        }
+        &:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0px 1000px gainsboro inset;
+        }
+    }
+    input, #button {
+        display: block;
+        width: 100%;
+        font-family: 'futura', sans-serif;
+        border-radius: 0;
+        appearance: none;
+        -webkit-appearance: none;
+        &:focus {
+            outline: none;
+        }
+    }
+    > * {
+        max-width: 300px;
+        width: 80%;
+        margin: 0 auto;
+    }
+    form {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    #button {
+        background: rgba(220,220,220,0.4);
+        color: white;
+        appearance: none;
+        border: none;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        transition: background .5s;
+        cursor: pointer;
+        font-size: 14px;
+        padding: 5px 0;
+        border-radius: 0;
+        margin-bottom: 10px;
+        &:hover {
+            background: darken(gainsboro, 10%);
+        }
+    }
+    a {
+        color: white;
+        text-decoration: none;
+        float: right;
+    }
+    a + br + a {
+        display: none;
+    }
+}

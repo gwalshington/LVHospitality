@@ -1,6 +1,5 @@
 <body id="welcomeback">
     <aside id="welcome">
-        
         <%= image_tag("logo.png") %>
         <div class="welcomebox">
             <h1>Welcome back,<br><%= current_user.first_name %>!</h1>
@@ -35,12 +34,11 @@
         </div>
         <nav>
             <a id="updateitinerary">Update Itinerary</a>
-            <%= link_to "Hospitality Guide", guide_path  %>
-            <%= link_to "Location Guide", map_path  %>
-            <a href="http://us.louisvuitton.com/eng-us/stories/high-jewellery" target="_blank">LV High Jewelry</a>
+            <%= link_to "LV Boutique", boutique_path  %>
+            <a id="oahu">Oahu Island</a>
+            <a id="fourseasons">Four Seasons</a>
         </nav>
         <p id="liason">
-            
             <%= image_tag("#{@liason.photo_path}") %>
             <span><%= @liason.first_name %><br>Your Vip Liason</span>
         </p>
@@ -51,4 +49,16 @@
     </p>
     <%= render partial: 'events' %>
     <%= render partial: 'layouts/contact' %>
+    <div id="oahuModal" style="background: url('<%= image_path("experience/1.jpg") %>'); background-size: cover!important; background-position: center center;">
+        <div>
+            <h6>Oahu Island</h6>
+            <p>Known as ‘The Gathering Place’ and renowned as a surfer’s paradise, Oahu is Hawaii’s most populous and metropolitan island and home to the legendary Honolulu, the state capital.<br><br>The island boasts a myriad of stunning beaches, mountains, gardens and cultural sights of significance, such as Pearl Harbor, Diamond Head State Park and Iolani Palace.</p>
+        </div>
+    </div>
+    <div id="fourseasonsModal" style="background: url('<%= image_path("experience/2.jpg") %>'); background-size: cover!important; background-position: center center;">
+        <div>
+            <h6>Four Seasons</h6>
+            <p>Nestled on Oahu’s sunny western coast and soaking up the surrounding natural beauty, the five-star Four Seasons Resort Oahu at Ko Olina delivers the lap-of-luxury touches you would expect from a Four Seasons  merged with unmistakable Hawaiian style and aloha spirit.<br><br>Spoilt for choice doesn’t even come close - a selection of pools and beaches, an array of land and water-based activities, from golf and tennis to traditional Hawaiian outrigger canoe rides, and a variety of first-class dining options, await.</p>
+        </div>
+    </div>
 </body>
