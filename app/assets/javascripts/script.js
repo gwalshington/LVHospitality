@@ -57,19 +57,4 @@ window.addEventListener("DOMContentLoaded", function() {
         }
     }
     contact();
-    
-    /* Welcome Screen on Mobile */
-    function mobile(){
-        setInterval(function(){
-            if(window.location.href.indexOf("itinerary") != -1){
-                document.body.classList.add('itinerary');
-            }
-        }, 100);
-        document.querySelector('header button').classList.remove('active');
-        clearInterval(myVar);
-    }
-    
-    document.querySelector('#itineraryNav').addEventListener("click", mobile);
-    window.onload = mobile();
-
 }, false);
