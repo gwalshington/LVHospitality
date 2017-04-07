@@ -22,6 +22,16 @@ window.addEventListener("DOMContentLoaded", function() {
         i;
         for (i = 0; i < events.length; ++i) addEvent(events[i], "click", guide);
         
+    function category() {
+        if ("" === this.className) {
+            for (var e = 0; e < sections.length; e += 1) sections[e].className = "";
+            this.className = "expanded"
+        } else this.className = ""
+    }
+    var sections = document.querySelectorAll("#guide aside"),
+        i;
+        for (i = 0; i < sections.length; ++i) addEvent(sections[i], "click", category);
+        
     /* Contact */
     function contact(){
         document.querySelector('header #contact').addEventListener("click", function() {

@@ -1,16 +1,32 @@
 #guide {
+    background: black;
+    #background {
+        display: none;
+    }
     article {
-        border-width: 0 10px;
-        border-style: solid;
         box-shadow: 0px 5000px 0px rgba(0, 0, 0, 0.45) inset;
-        &:first-of-type {
-            border-top: 10px solid white;
-        }
-        &:last-of-type {
-            border-bottom: 10px solid white;
-        }
         p {
             transition: opacity .5s, max-height .5s, padding .5s ease-in-out;
+        }
+    }
+    aside {
+        box-shadow: 0px 5000px 0px rgba(0, 0, 0, 0.3) inset;
+        cursor: pointer;
+        max-height: 30vh;
+        height: 100%;
+        &:hover {
+            box-shadow: 0px 5000px 0px rgba(0, 0, 0, 0.5) inset;
+        }
+        + section {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .5s;
+        }
+        &.expanded {
+            + section {
+                overflow: visible;
+                max-height: 1300px;
+            }
         }
     }
     
@@ -47,6 +63,9 @@
             font-family: 'Roboto', sans-serif;
             font-weight: 100;
             text-align: center;
+            a {
+                color: white;
+            }
         }
         span {
             display: block;
@@ -74,7 +93,6 @@
     
     aside {
         padding: 10px !important;
-        height: 100px;
         display: table;
         width: 100%;
         cursor: default!important;
@@ -102,6 +120,8 @@
         padding: 10px 0 20px;
         color: white;
         text-align: center;
+        margin-bottom: 0;
+        padding-bottom: 0;
         img {
             height: 7px;
             display: block;
@@ -121,9 +141,6 @@
         }
         article.open, aside.open {
             padding: 120px 50px;
-        }
-        aside {
-            height: 120px;
         }
         aside h2 {
             font-size: 25px;
