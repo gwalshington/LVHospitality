@@ -91,6 +91,7 @@ body.itinerary #powered {
         padding-top: 45px;
         height: 100%;
         overflow: scroll;
+        -webkit-overflow-scrolling: touch;
         position: fixed;
         right: 0;
         box-sizing: border-box;
