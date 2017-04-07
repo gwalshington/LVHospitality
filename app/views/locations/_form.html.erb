@@ -10,36 +10,11 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :location_name %>
-    <%= f.text_field :location_name %>
-  </div>
-
-  <div class="field">
-    <%= f.label :phone rescue nil%>
-    <%= f.text_field :phone rescue nil%>
-  </div>
-
-
-
-  <div class="field">
-    <%= f.label :address rescue nil%>
-    <%= f.text_field :address rescue nil%>
-  </div>
-
-
-  <div class="field">
-    <%= f.label :lat %>
-    <%= f.text_field :lat %>
-  </div>
-
-  <div class="field">
-    <%= f.label :lng %>
-    <%= f.text_field :lng %>
-  </div>
-
-  <div class="actions">
+    <%= f.text_field :location_name, placeholder: 'Location Name' %>
+    <%= f.text_field :phone, placeholder: 'Phone Number' rescue nil%>
+    <%= f.text_field :address, placeholder: 'Address' rescue nil%>
+    <%= f.text_field :lat, placeholder: 'Latitude' %>
+    <%= f.text_field :lng, placeholder: 'Longitude' %>
     <%= f.submit %>
-  </div>
+    <%= link_to 'Back', locations_path %>
 <% end %>

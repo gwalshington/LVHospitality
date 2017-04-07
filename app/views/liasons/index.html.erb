@@ -1,33 +1,42 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Liasons</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>First name</th>
-      <th>Phone</th>
-      <th>Email</th>
-      <th>Photo path</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @liasons.each do |liason| %>
-      <tr>
-        <td><%= liason.first_name %></td>
-        <td><%= liason.phone %></td>
-        <td><%= liason.email %></td>
-        <td><%= liason.photo_path %></td>
-        <td><%= link_to 'Show', liason %></td>
-        <td><%= link_to 'Edit', edit_liason_path(liason) %></td>
-        <td><%= link_to 'Destroy', liason, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Liason', new_liason_path %>
+<body id="admin">
+    <p id="notice"><%= notice %></p>
+    <h1>Liasons</h1>
+    <table id="table_id" class="display striped table-data" cellspacing="0" width="100%">
+      <thead>
+        <tr>
+          <th>First name</th>
+          <th>Phone</th>
+          <th>Email</th>
+          <th>Photo path</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+    
+      <tbody>
+        <% @liasons.each do |liason| %>
+          <tr>
+            <td><%= liason.first_name %></td>
+            <td><%= liason.phone %></td>
+            <td><%= liason.email %></td>
+            <td><%= liason.photo_path %></td>
+            <td><%= link_to 'Show', liason %></td>
+            <td><%= link_to 'Edit', edit_liason_path(liason) %></td>
+            <td><%= link_to 'Destroy', liason, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <%= link_to 'New Liason', new_liason_path %>
+    <script>
+    $(document).ready( function () {
+        $('#table_id').DataTable( {
+            "paging":   true,
+            "ordering": true,
+            "info":     true,
+            "order": [[ 3, "desc" ]]
+        } );
+    } );
+    </script>
+</body>

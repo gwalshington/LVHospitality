@@ -27,6 +27,7 @@ html, body {
 
 #welcome, #guide, #admin, #itinerary, #boutique {
     padding-top: 55px;
+    box-sizing: border-box;
 }
 
 #background {
@@ -197,6 +198,40 @@ html, body {
         }
         h1 {
             font-size: 60px;
+        }
+    }
+}
+
+.newlocation {
+    form {
+        width: 90%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    input {
+        box-sizing: border-box;
+        width: 100%;
+        margin: 10px 0;
+        &[type="text"] {
+            padding: 10px;
+            display: block;
+        }
+        &[type="submit"] {
+            background: rgba(220,220,220,0.7);
+            color: black;
+            appearance: none;
+            border: none;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: background .5s;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 0;
+            display: block;
+            padding: 5px 0;
+            &:hover {
+                background: darken(gainsboro, 10%);
+            }
         }
     }
 }

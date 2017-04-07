@@ -2,7 +2,7 @@
 <p id="notice"><%= notice %></p>
     <h1>Locations</h1>
     
-    <table>
+    <table id="table_id" class="display striped table-data" cellspacing="0" width="100%">
       <thead>
         <tr>
           <th>Location name</th>
@@ -32,7 +32,15 @@
       </tbody>
     </table>
     
-    <br>
-    
     <%= link_to 'New Location', new_location_path %>
+    <script>
+    $(document).ready( function () {
+        $('#table_id').DataTable( {
+            "paging":   true,
+            "ordering": true,
+            "info":     true,
+            "order": [[ 3, "desc" ]]
+        } );
+    } );
+    </script>
 </body>
