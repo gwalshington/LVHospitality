@@ -57,26 +57,26 @@ window.addEventListener("DOMContentLoaded", function() {
         }
     }
     contact();
-    
-    /* Hilight Nav */
-    function extractPageName(hrefString) {
-        var arr = hrefString.split('/');
-        return (arr.length < 2) ? hrefString : arr[arr.length - 2].toLowerCase() + arr[arr.length - 1].toLowerCase();
-    }
-    
-    function setActiveMenu(arr, crtPage) {
-        for (var i = 0; i < arr.length; i++) {
-            if (extractPageName(arr[i].href) == crtPage) {
-                if (arr[i].parentNode.tagName != "nav") {
-                    arr[i].className = "currentpage";
-                }
+}, false);
+
+/* Hilight Nav */
+function extractPageName(hrefString) {
+    var arr = hrefString.split('/');
+    return (arr.length < 2) ? hrefString : arr[arr.length - 2].toLowerCase() + arr[arr.length - 1].toLowerCase();
+}
+
+function setActiveMenu(arr, crtPage) {
+    for (var i = 0; i < arr.length; i++) {
+        if (extractPageName(arr[i].href) == crtPage) {
+            if (arr[i].parentNode.tagName != "nav") {
+                arr[i].className = "currentpage";
             }
         }
     }
-    
-    function setPage() {
-        hrefString = document.location.href ? document.location.href : document.location;
-        if (document.querySelector("nav") != null)
-            setActiveMenu(document.querySelector("nav").getElementsByTagName("a"), extractPageName(hrefString));
-    }
-}, false);
+}
+
+function setPage() {
+    hrefString = document.location.href ? document.location.href : document.location;
+    if (document.querySelector("nav") != null)
+        setActiveMenu(document.querySelector("nav").getElementsByTagName("a"), extractPageName(hrefString));
+}
