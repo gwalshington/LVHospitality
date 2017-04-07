@@ -177,7 +177,7 @@ body.itinerary aside#welcome {
         display: block !important;
         width: calc(100% - 300px);
         float: left;
-        position: absolute;
+        position: fixed;
         top: 50%;
         transform: translateY(-50%);
         overflow: scroll;
