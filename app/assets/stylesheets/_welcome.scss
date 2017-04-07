@@ -193,7 +193,7 @@ body.itinerary aside#welcome {
         }
         + #powered {
             width: calc(100% - 300px);
-            position: absolute;
+            position: fixed;
             bottom: 0;
             margin-bottom: 20px;
         }
