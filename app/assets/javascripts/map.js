@@ -335,7 +335,7 @@ var mapApi = "AIzaSyCqipnIe_n5L6Dg_HHPzcApx21xerEuu9o"
                             }
                            var address = this.address;
                            console.log(phone);
-						   infowindow.setContent('<h2 class="iw-heading">' + title + '</h2>'+ address + phone +'</div>');
+						   infowindow.setContent('<h2 class="iw-heading">' + title + '</h2><p>' + address + '</p><a href="tel:' + phone + '">' + phone +'</a></div>');
 						   infowindow.open(map, this);
 						});
 
