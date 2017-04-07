@@ -57,6 +57,17 @@ window.addEventListener("DOMContentLoaded", function() {
         }
     }
     contact();
+    
+    /* Web App Links */
+    var a=document.getElementsByTagName("a");
+    for(var i=0;i<a.length;i++)
+    {
+        a[i].onclick=function()
+        {
+            window.location=this.getAttribute("href");
+            return false
+        }
+    }
 }, false);
 
 /* Hilight Nav */
