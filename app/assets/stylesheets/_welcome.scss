@@ -72,28 +72,7 @@ aside#welcome {
             font-size: 12px;
             letter-spacing: 1px;
             z-index: 1000;
-            &:after {
-                position: absolute;
-                transition: .3s;
-                transform: translate3d(0,0,0);
-                -webkit-transform: translate3d(0,0,0);
-                content: '';
-                width: 0;
-                bottom: 0;
-                background: white;
-                height: 120%;
-                left: -10%;
-                transform: skewX(15deg);
-                z-index: -1;
-            }
-            &:hover {
-                cursor: pointer;
-                color: black;
-                &:after {
-                    left: -10%;
-                    width: 120%;
-                }
-            }
+            
         }
     }
     #liason {
@@ -201,5 +180,34 @@ body.itinerary aside#welcome {
     }
     #welcomeback {
         overflow: hidden;
+    }
+}
+
+@media (pointer: fine) {
+    aside#welcome {
+        nav a {
+            &:after {
+                position: absolute;
+                transition: .3s;
+                transform: translate3d(0,0,0);
+                -webkit-transform: translate3d(0,0,0);
+                content: '';
+                width: 0;
+                bottom: 0;
+                background: white;
+                height: 120%;
+                left: -10%;
+                transform: skewX(15deg);
+                z-index: -1;
+            }
+            &:hover {
+                cursor: pointer;
+                color: black;
+                &:after {
+                    left: -10%;
+                    width: 120%;
+                }
+            }
+        }
     }
 }
