@@ -1,6 +1,8 @@
 #modalBG, #contactModal {
     opacity: 0;
     transition: opacity .4s, bottom .2s;
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
     pointer-events: none;
 }
 
@@ -53,6 +55,8 @@
         width: 100%;
         box-sizing: border-box;
         transition: background .4s;
+        transform: translate3d(0,0,0);
+        -webkit-transform: translate3d(0,0,0);
         &:hover {
             background: rgba(40,40,40,0.8);
         }
@@ -77,6 +81,8 @@ body.contact {
     #modalBG, #contactModal {
         opacity: 1;
         transition: opacity .4s, bottom .2s;
+        transform: translate3d(0,0,0);
+        -webkit-transform: translate3d(0,0,0);
         z-index: 1005;
         overflow: visible;
         pointer-events: all;
@@ -132,6 +138,8 @@ body.oahu {
     #modalBG, #oahuModal {
         opacity: 1;
         transition: opacity .4s, bottom .2s;
+        transform: translate3d(0,0,0);
+        -webkit-transform: translate3d(0,0,0);
         box-shadow: 0px 5000px 0px rgba(0, 0, 0, 0.5) inset;
         color: white;
         z-index: 1005;
@@ -151,6 +159,8 @@ body.fourseasons {
     #modalBG, #fourseasonsModal {
         opacity: 1;
         transition: opacity .4s, bottom .2s;
+        transform: translate3d(0,0,0);
+        -webkit-transform: translate3d(0,0,0);
         box-shadow: 0px 5000px 0px rgba(0, 0, 0, 0.5) inset;
         color: white;
         z-index: 1005;

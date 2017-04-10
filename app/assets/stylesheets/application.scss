@@ -120,6 +120,8 @@ html, body {
         letter-spacing: 2px;
         text-transform: uppercase;
         transition: background .5s;
+        transform: translate3d(0,0,0);
+        -webkit-transform: translate3d(0,0,0);
         cursor: pointer;
         font-size: 14px;
         padding: 5px 0;
@@ -224,6 +226,8 @@ html, body {
             letter-spacing: 2px;
             text-transform: uppercase;
             transition: background .5s;
+            transform: translate3d(0,0,0);
+            -webkit-transform: translate3d(0,0,0);
             cursor: pointer;
             font-size: 14px;
             border-radius: 0;

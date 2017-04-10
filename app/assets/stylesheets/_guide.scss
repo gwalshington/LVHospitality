@@ -7,6 +7,8 @@
         box-shadow: 0px 5000px 0px rgba(0, 0, 0, 0.45) inset;
         p {
             transition: opacity .5s, max-height .5s, padding .5s ease-in-out;
+            transform: translate3d(0,0,0);
+            -webkit-transform: translate3d(0,0,0);
         }
     }
     aside {
@@ -21,6 +23,8 @@
             max-height: 0;
             overflow: hidden;
             transition: max-height .5s;
+            transform: translate3d(0,0,0);
+            -webkit-transform: translate3d(0,0,0);
         }
         &.expanded {
             + section {
@@ -121,7 +125,6 @@
         color: white;
         text-align: center;
         margin-bottom: 0;
-        padding-bottom: 0;
         img {
             height: 7px;
             display: block;
@@ -135,6 +138,8 @@
         article, aside {
             padding: 50px;
             transition: padding .5s;
+            transform: translate3d(0,0,0);
+            -webkit-transform: translate3d(0,0,0);
         }
         article p span {
             font-size: 14px;

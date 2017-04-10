@@ -20,6 +20,8 @@ header {
         max-height: 0;
         overflow: hidden;
         transition: max-height .5s;
+        transform: translate3d(0,0,0);
+        -webkit-transform: translate3d(0,0,0);
         a {
             display: block;
             padding: 15px 20px;
@@ -57,6 +59,8 @@ header {
             height: 3px;
             background: white;
             transition: background 0s 0.2s;
+            transform: translate3d(0,0,0);
+            -webkit-transform: translate3d(0,0,0);
             &:before, &:after {
                 position: absolute;
                 display: block;

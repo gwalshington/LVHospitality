@@ -74,8 +74,9 @@ aside#welcome {
             z-index: 1000;
             &:after {
                 position: absolute;
-                -webkit-transition: .3s;
                 transition: .3s;
+                transform: translate3d(0,0,0);
+                -webkit-transform: translate3d(0,0,0);
                 content: '';
                 width: 0;
                 bottom: 0;
