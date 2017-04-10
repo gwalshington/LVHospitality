@@ -23,7 +23,7 @@
     margin: auto;
     position: fixed;
     border-radius: 5px;
-    top: 85px; left: 0; right: 0; bottom: -150%;
+    top: 65px; left: 0; right: 0; bottom: -150%;
     text-align: center;
     text-transform: uppercase;
     > * {
@@ -88,7 +88,7 @@ body.contact {
         pointer-events: all;
     }
     #contactModal {
-        bottom: -35px;
+        bottom: 0px;
     }
 }
 
